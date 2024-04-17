@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+
+@font-face {
+  font-family: ChiroHeiHK_SB;
+  src: url(../media/text/ChironHeiHK-SB.ttf);
+}
+
+@font-face {
+  font-family: ChiroHeiHK_M;
+  src: url(../media/text/ChironHeiHK-M.ttf);
+}
+
+@font-face {
+  font-family: ChiroHeiHk_L;
+  src: url(../media/text/ChironHeiHK-L.ttf);
+}
+
+@mixin px768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin px820 {
+  @media (max-width: 820px) {
+    @content;
+  }
+}
+
+$color-1: #6450dc;
+$color-2: #d7dcf0;
+$color-3: #0f1293;
+$color-4: #ffffff;
+$color-5: #0091da;
+$color-6: #ce0058;

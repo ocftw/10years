@@ -1,0 +1,252 @@
+@import "./variables";
+
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  height: 100%;
+  width: calc(100vw + 18px);
+  overflow: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.first-part {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../media/img/homepage_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.first-part::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100vw + 18px);
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+}
+
+.header,
+.main-group {
+  z-index: 1;
+}
+
+.logo {
+  height: 2.5rem;
+  width: 100px;
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+}
+
+.main-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 90vh;
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: ChiroHeiHK_SB;
+
+    @include px768 {
+      font-size: 2.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 0 3rem;
+    font-family: ChiroHeiHK_M;
+    letter-spacing: 0.25rem;
+  }
+
+  .main-group-1 {
+    width: 45%;
+
+    @include px820 {
+      width: 100%;
+    }
+  }
+
+  .main-group-2 {
+    width: 45%;
+
+    @include px820 {
+      width: 0%;
+    }
+  }
+}
+
+.main-group-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group {
+  margin: 1rem;
+
+  button {
+    border-radius: 60px;
+    padding: 0.6em 1.8em;
+    background-color: transparent;
+    background-color: $color-1;
+    color: $color-2;
+    border: none;
+    cursor: pointer;
+    font-family: ChiroHeiHK_SB;
+    font-size: 2rem;
+    transition: opacity 0.3s ease-in;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #c4e9f9;
+
+  @include px820 {
+    align-items: center;
+  }
+}
+
+.content-1,
+.content-2 {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+
+  @include px820 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.video-group,
+.swiper-group {
+  width: 45%;
+
+  @include px820 {
+    width: 80%;
+    margin: 1rem 0;
+  }
+
+  @include px768 {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+}
+
+.text-area {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include px820 {
+    width: 80%;
+  }
+
+  @include px768 {
+    width: 100%;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 0 3rem;
+    font-family: ChiroHeiHK_M;
+    letter-spacing: 0.25rem;
+    word-wrap: break-word;
+  }
+}
+
+.content-2 {
+  flex-direction: row-reverse;
+
+  @include px820 {
+    flex-direction: column-reverse;
+  }
+}
+
+.swiper-img {
+  width: 100%;
+  height: 45vh;
+  border-radius: 40px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: #e5e4e4;
+
+  img {
+    width: 80%;
+    height: 60vh;
+    border-radius: 50px;
+
+    @include px820 {
+      height: 45vh;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 0 3rem;
+    font-family: ChiroHeiHK_M;
+    letter-spacing: 0.25rem;
+    word-wrap: break-word;
+    margin: 2rem 0;
+    width: 80%;
+
+    @include px768 {
+      padding: 0;
+    }
+  }
+}
+
+video {
+  border-radius: 50px;
+}

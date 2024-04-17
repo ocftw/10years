@@ -1,14 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./homepage_logo.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OCF 10years</title>
-    <script type="module" crossorigin src="./assets/index-CJuPsvK3.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-iKPAwI9b.css" />
+    <!-- 引入Swiper的CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style/mystyle.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <!-- section1 -->
+    <div class="first-part">
+      <div class="header">
+        <img src="./media/img/homepage_logo.svg" alt="" class="logo" />
+      </div>
+      <div class="main-group">
+        <div class="main-group-1">
+          <h2>主標題</h2>
+          <p>
+            這是一串副標題用來測試文字使用，這是一串副標題用來測試文字使用這是一串副標題用來測試文字使用，這是一串副標題用來測試文字使用
+          </p>
+          <div class="btn-group">
+            <button>立即參與</button>
+          </div>
+        </div>
+        <div class="main-group-2"></div>
+      </div>
+    </div>
+
+    <!-- section2 -->
+    <div class="main-content">
+      <section class="content-1">
+        <div class="text-area">
+          <p>
+            一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，
+          </p>
+        </div>
+
+        <div class="video-group">
+          <video
+            id="myVideo"
+            src="./media/img/comming_soon.mp4"
+            controls
+            loop
+            muted
+            preload="auto"
+            volume="0.6"
+            poster="./media/img/comming_soon.jpg"
+            style="width: 100%"
+          ></video>
+        </div>
+      </section>
+
+      <section class="content-2">
+        <div class="text-area">
+          <p>
+            一些用來描述圖片的文字內容，一些用來描述圖片的文字內容，一些用來描述圖片的文字內容，一些用來描述圖片的文字內容，一些用來描述圖片的文字內容，
+          </p>
+        </div>
+
+        <div class="swiper-group">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- 插入每個swiper slide -->
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/comming_soon.jpg"
+                  alt="comming_soon_pic"
+                  class="swiper-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/swiper_1.jpg"
+                  alt="homePageimg1"
+                  class="swiper-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/test.png"
+                  alt="homePageimg2"
+                  class="swiper-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/homepage_background.jpg"
+                  alt="homePageimg3"
+                  class="swiper-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- section3 -->
+    <div class="bottom">
+      <img src="./media/img/comming_soon.jpg" alt="" />
+      <p>
+        一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容
+      </p>
+    </div>
   </body>
+  <!-- 引入Swiper的JavaScript -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // 初始化Swiper
+    var swiper = new Swiper(".swiper-container", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      centeredSlides: false,
+      effect: "fade",
+      speed: 2000,
+    });
+  </script>
 </html>
