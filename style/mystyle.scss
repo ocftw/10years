@@ -1,11 +1,15 @@
 @import "./variables";
 
 html {
-  overflow: -moz-hidden-unscrollable;
-  height: 100%;
+  /* 溢出時顯示滾動條 */
+  overflow: scroll;
+  /* 隱藏滾動條 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
 }
 
-body::-webkit-scrollbar {
+/* WebKit 瀏覽器 (例如 Chrome 和 Safari) */
+html::-webkit-scrollbar {
   display: none;
 }
 
@@ -32,7 +36,7 @@ body {
 .first-part {
   display: flex;
   flex-direction: column;
-  background-image: url(../media/img/homepage_background.jpg);
+  background-image: url(../media/img/KeyVision.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,8 +49,9 @@ body {
   left: 0;
   width: calc(100vw + 18px);
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.3);
+  // backdrop-filter: blur(4px);
+  backdrop-filter: opacity(60%);
 }
 
 .header {
