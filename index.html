@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./media/img/Logo_Compact _White.png" />
     <title>OCF 10years</title>
     <!-- 引入Swiper的CSS -->
     <link
@@ -16,24 +17,25 @@
     <!-- section1 -->
     <div class="first-part">
       <div class="header">
-        <img src="./media/img/homepage_logo.svg" alt="" class="logo" />
+        <img src="./media/img/Logo_Compact _White.png" alt="" class="logo" />
       </div>
     </div>
     <!-- <section class="temporary"></section> -->
 
     <div class="main-group-1">
-      <h2>主標題</h2>
       <p>
         這是一串副標題用來測試文字使用，這是一串副標題用來測試文字使用這是一串副標題用來測試文字使用，這是一串副標題用來測試文字使用
       </p>
       <div class="btn-group">
-        <button>立即參與</button>
+        <button>
+          <a href="https://ocftw.kktix.cc/events/festival2024"> 立即參與</a>
+        </button>
       </div>
     </div>
 
     <!-- section2 -->
     <div class="main-content">
-      <section class="content-1">
+      <!-- <section class="content-1">
         <div class="text-area">
           <p>
             一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，
@@ -53,7 +55,7 @@
             style="width: 100%"
           ></video>
         </div>
-      </section>
+      </section> -->
 
       <section class="content-2">
         <div class="text-area">
@@ -66,30 +68,24 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <!-- 插入每個swiper slide -->
+
               <div class="swiper-slide">
                 <img
-                  src="./media/img/comming_soon.jpg"
-                  alt="comming_soon_pic"
-                  class="swiper-img"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="./media/img/swiper_1.jpg"
+                  src="./media/img/3.png"
                   alt="homePageimg1"
                   class="swiper-img"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="./media/img/test.png"
+                  src="./media/img/4.png"
                   alt="homePageimg2"
                   class="swiper-img"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="./media/img/homepage_background.jpg"
+                  src="./media/img/5.png"
                   alt="homePageimg3"
                   class="swiper-img"
                 />
@@ -102,7 +98,7 @@
 
     <!-- section3 -->
     <div class="bottom">
-      <img src="./media/img/comming_soon.jpg" alt="" />
+      <img src="./media/img/raise.png" alt="" id="targetImage" />
       <p>
         一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容
       </p>
@@ -123,6 +119,12 @@
       centeredSlides: false,
       effect: "fade",
       speed: 2000,
+    });
+
+    let targetImage = document.getElementById("targetImage");
+
+    targetImage.addEventListener("click", function () {
+      window.location.href = "https://forms.gle/NuRLZanWuq7QuqUX8";
     });
   </script>
 </html>

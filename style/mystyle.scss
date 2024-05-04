@@ -36,7 +36,7 @@ body {
 .first-part {
   display: flex;
   flex-direction: column;
-  background-image: url(../media/img/KeyVision.jpg);
+  background-image: url(../media/img/KeyVision_v1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,9 +55,9 @@ body {
   left: 0;
   width: calc(100vw + 18px);
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
+  // background-color: rgba(255, 255, 255, 0.3);
   // backdrop-filter: blur(4px);
-  backdrop-filter: opacity(60%);
+  // backdrop-filter: opacity(60%);
 
   @include px768 {
     height: 65%;
@@ -74,7 +74,7 @@ body {
 }
 
 .logo {
-  height: 2.5rem;
+  height: 2rem;
   width: 100px;
   position: relative;
   top: 2rem;
@@ -83,6 +83,7 @@ body {
 
 .main-group-1 {
   display: flex;
+  padding-top: 1rem;
   background-color: #c4e9f9;
 
   h2 {
@@ -123,12 +124,21 @@ body {
     padding: 0.6em 1.8em;
     background-color: transparent;
     background-color: $color-1;
-    color: $color-2;
     border: none;
     cursor: pointer;
     font-family: ChiroHeiHK_SB;
     font-size: 2rem;
     transition: opacity 0.3s ease-in;
+    a {
+      color: $color-2;
+      text-decoration: none;
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+      text-decoration: none;
+    }
   }
   button:hover {
     opacity: 0.8;
@@ -222,9 +232,10 @@ body {
   background-color: #e5e4e4;
 
   img {
-    width: 80%;
-    height: 60vh;
+    width: 85%;
+    height: 75vh;
     border-radius: 50px;
+    cursor: pointer;
 
     @include px820 {
       height: 45vh;
