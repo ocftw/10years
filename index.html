@@ -15,94 +15,65 @@
   </head>
   <body>
     <!-- section1 -->
-    <div class="first-part">
+    <section class="first-part">
       <div class="header">
         <img src="./media/img/Logo_Compact _White.png" alt="" class="logo" />
       </div>
-    </div>
-    <!-- <section class="temporary"></section> -->
-
-    <div class="main-group-1">
-      <p>
-        這是一串副標題用來測試文字使用，這是一串副標題用來測試文字使用這是一串副標題用來測試文字使用，這是一串副標題用來測試文字使用
-      </p>
       <div class="btn-group">
         <button>
           <a href="https://ocftw.kktix.cc/events/festival2024"> 立即參與</a>
         </button>
       </div>
-    </div>
+    </section>
+
+    <div class="main-group-1"></div>
 
     <!-- section2 -->
-    <div class="main-content">
-      <!-- <section class="content-1">
-        <div class="text-area">
-          <p>
-            一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，一些用來描述影音的文字內容，
-          </p>
-        </div>
-
-        <div class="video-group">
-          <video
-            id="myVideo"
-            src="./media/img/comming_soon.mp4"
-            controls
-            loop
-            muted
-            preload="auto"
-            volume="0.6"
-            poster="./media/img/comming_soon.jpg"
-            style="width: 100%"
-          ></video>
-        </div>
-      </section> -->
-
-      <section class="content-2">
-        <div class="text-area">
-          <p>
-            一些用來描述圖片的文字內容，一些用來描述圖片的文字內容，一些用來描述圖片的文字內容，一些用來描述圖片的文字內容，一些用來描述圖片的文字內容，
-          </p>
-        </div>
-
+    <section class="main-content">
+      <div class="content-2">
         <div class="swiper-group">
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <!-- 插入每個swiper slide -->
-
               <div class="swiper-slide">
                 <img
-                  src="./media/img/3.png"
+                  src="./media/img/2.png"
                   alt="homePageimg1"
                   class="swiper-img"
                 />
               </div>
+
               <div class="swiper-slide">
                 <img
-                  src="./media/img/4.png"
+                  src="./media/img/3.png"
                   alt="homePageimg2"
                   class="swiper-img"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="./media/img/5.png"
+                  src="./media/img/4.png"
                   alt="homePageimg3"
+                  class="swiper-img"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/5.png"
+                  alt="homePageimg4"
                   class="swiper-img"
                 />
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <!-- section3 -->
-    <div class="bottom">
+    <section class="bottom">
       <img src="./media/img/raise.png" alt="" id="targetImage" />
-      <p>
-        一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容，一些用來描述大世紀展覽圖片的文字內容
-      </p>
-    </div>
+    </section>
   </body>
   <!-- 引入Swiper的JavaScript -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -125,6 +96,52 @@
 
     targetImage.addEventListener("click", function () {
       window.location.href = "https://forms.gle/NuRLZanWuq7QuqUX8";
+    });
+
+    function scrollPage() {
+      document.addEventListener(
+        "wheel",
+        function (e) {
+          e.preventDefault();
+          if (e.deltaY < 0) navigateUp();
+          else navigateDown();
+        },
+        { passive: false }
+      );
+
+      document.addEventListener(
+        "keydown",
+        function (e) {
+          e.preventDefault();
+          if (e.which === 38) {
+            navigateUp();
+          } else if (e.which === 40) {
+            navigateDown();
+          }
+        },
+        { passive: false }
+      );
+    }
+
+    function pagination(int) {
+      window.scrollBy({
+        top: int,
+        behavior: "smooth",
+      });
+    }
+
+    function navigateUp() {
+      let height = -window.innerHeight;
+      pagination(height);
+    }
+
+    function navigateDown() {
+      let height = window.innerHeight;
+      pagination(height);
+    }
+
+    window.addEventListener("DOMContentLoaded", function () {
+      scrollPage();
     });
   </script>
 </html>

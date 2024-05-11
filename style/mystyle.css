@@ -53,11 +53,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+  position: relative;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
   .first-part {
     height: 65vh;
+    background-size: 100% 100%;
   }
 }
 
@@ -94,7 +96,6 @@ body {
 
 .main-group-1 {
   display: flex;
-  padding-top: 1rem;
   background-color: #c4e9f9;
 }
 .main-group-1 h2 {
@@ -128,21 +129,27 @@ body {
 }
 
 .btn-group {
-  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 15%;
 }
 .btn-group button {
   border-radius: 60px;
   padding: 0.6em 1.8em;
   background-color: transparent;
-  background-color: #6450dc;
+  background-color: #0091da;
   border: none;
   cursor: pointer;
   font-family: ChiroHeiHK_SB;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transition: opacity 0.3s ease-in;
+  opacity: 0.7;
 }
 .btn-group button a {
-  color: #d7dcf0;
+  color: #ffffff;
   text-decoration: none;
 }
 .btn-group button a:link,
@@ -151,54 +158,29 @@ body {
   text-decoration: none;
 }
 .btn-group button:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .main-content {
   display: flex;
-  flex-direction: column;
   background-color: #c4e9f9;
-  padding-top: 1.5rem;
-}
-@media (max-width: 820px) {
-  .main-content {
-    align-items: center;
-  }
-}
-
-.content-1,
-.content-2 {
   width: 100vw;
+  height: 100vh;
+}
+
+.content-2 {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 1.5rem 0;
 }
 @media (max-width: 820px) {
-  .content-1,
   .content-2 {
-    flex-direction: column;
-    align-items: center;
+    height: 45vh;
   }
 }
 
-.video-group,
 .swiper-group {
-  width: 45%;
-}
-@media (max-width: 820px) {
-  .video-group,
-  .swiper-group {
-    width: 80%;
-    margin: 1rem 0;
-  }
-}
-@media (max-width: 768px) {
-  .video-group,
-  .swiper-group {
-    width: 100%;
-    margin: 1.5rem 0;
-  }
+  width: 100%;
 }
 
 .text-area {
@@ -226,33 +208,28 @@ body {
   word-wrap: break-word;
 }
 
-.content-2 {
-  flex-direction: row-reverse;
+.swiper-img {
+  width: 100%;
+  height: 100vh;
 }
 @media (max-width: 820px) {
-  .content-2 {
-    flex-direction: column-reverse;
+  .swiper-img {
+    width: 100%;
+    height: 45vh;
   }
 }
 
-.swiper-img {
-  width: 100%;
-  height: 45vh;
-  border-radius: 40px;
-}
-
 .bottom {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
   background-color: #e5e4e4;
 }
 .bottom img {
-  width: 85%;
-  height: 75vh;
-  border-radius: 50px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 @media (max-width: 820px) {
