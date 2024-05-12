@@ -31,17 +31,14 @@
     <!-- section2 -->
     <section class="main-content">
       <div class="content-2">
+        <div class="text-area">
+          <img src="./media/img/2.png" alt="homePageimg1" class="swiper-img" />
+        </div>
+
         <div class="swiper-group">
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <!-- 插入每個swiper slide -->
-              <div class="swiper-slide">
-                <img
-                  src="./media/img/2.png"
-                  alt="homePageimg1"
-                  class="swiper-img"
-                />
-              </div>
 
               <div class="swiper-slide">
                 <img
@@ -72,11 +69,30 @@
 
     <!-- section3 -->
     <section class="bottom">
-      <img src="./media/img/raise.png" alt="" id="targetImage" />
+      <!-- <img src="./media/img/raise.png" alt="" id="targetImage" /> -->
+      <a
+        data-flickr-embed="true"
+        data-header="true"
+        data-footer="true"
+        class="flickr"
+        href="https://www.flickr.com/photos/ocftw/albums/72177720309849117"
+        title="OCF x Sāngs Taipei 跨界藝術夏日派對"
+      >
+        <img
+          src="https://live.staticflickr.com/65535/53054674113_728670779c_z.jpg"
+          class="flickr-img"
+          alt="OCF x Sāngs Taipei 跨界藝術夏日派對"
+        />
+      </a>
     </section>
   </body>
   <!-- 引入Swiper的JavaScript -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script
+    async
+    src="//embedr.flickr.com/assets/client-code.js"
+    charset="utf-8"
+  ></script>
   <script>
     // 初始化Swiper
     var swiper = new Swiper(".swiper-container", {
@@ -84,7 +100,7 @@
       spaceBetween: 0,
       loop: true,
       autoplay: {
-        delay: 2000,
+        delay: 3000,
         disableOnInteraction: false,
       },
       centeredSlides: false,
@@ -92,11 +108,11 @@
       speed: 2000,
     });
 
-    let targetImage = document.getElementById("targetImage");
+    // let targetImage = document.getElementById("targetImage");
 
-    targetImage.addEventListener("click", function () {
-      window.location.href = "https://forms.gle/NuRLZanWuq7QuqUX8";
-    });
+    // targetImage.addEventListener("click", function () {
+    //   window.location.href = "https://forms.gle/NuRLZanWuq7QuqUX8";
+    // });
 
     // 檢測是否為手機或平板
     function isMobileOrTablet() {

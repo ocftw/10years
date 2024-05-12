@@ -162,6 +162,7 @@ body {
   height: 100vh;
   @include px820 {
     height: fit-content;
+    width: 100%;
   }
 }
 
@@ -170,38 +171,50 @@ body {
   height: 100vh;
   display: flex;
   // padding: 1.5rem 0;
+  justify-content: space-around;
 
   @include px820 {
-    height: 45vh;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: unset;
   }
 }
 
 .swiper-group {
-  width: 100%;
-
-  // @include px820 {
-  //   width: 80%;
-  //   // margin: 1rem 0;
-  // }
-
-  // @include px768 {
-  //   width: 100%;
-  //   // margin: 1.5rem 0;
-  // }
-}
-
-.text-area {
-  width: 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 47%;
+  margin: auto 0;
 
   @include px820 {
-    width: 80%;
+    width: 100%;
+    margin: 0;
+    // margin: 1rem 0;
   }
 
   @include px768 {
     width: 100%;
+    justify-content: unset;
+    align-items: unset;
+    // margin: 1.5rem 0;
+  }
+}
+
+.text-area {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include px820 {
+    display: block;
+    width: 100%;
+    height: 45vh;
+  }
+
+  @include px768 {
+    display: block;
+    width: 100%;
+    height: 45vh;
   }
 
   p {
@@ -216,7 +229,19 @@ body {
 
 .swiper-img {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
+  border-radius: 10px;
+  // border-radius: 40px;
+
+  @include px820 {
+    width: 100%;
+    height: 45vh;
+  }
+}
+
+.flicke-img {
+  width: 100%;
+  height: 80vh;
   // border-radius: 40px;
 
   @include px820 {
@@ -227,6 +252,8 @@ body {
 
 .bottom {
   height: 100vh;
+  width: 100vw;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,17 +262,19 @@ body {
   background-color: #e5e4e4;
 
   @include px820 {
-    height: fit-content;
+    // height: fit-content;
+    height: 60vh;
+    width: 100%;
   }
 
   img {
-    width: 100%;
+    width: 90vw;
 
-    height: 100%;
-    // border-radius: 50px;
+    height: 80vh;
     cursor: pointer;
 
     @include px820 {
+      width: 100%;
       height: 45vh;
     }
   }
@@ -265,6 +294,15 @@ body {
     }
   }
 }
+
+// .flickr {
+//   width: 80vw;
+//   height: 60px;
+
+//   @include px820 {
+//     width: 100vw;
+//   }
+// }
 
 video {
   border-radius: 50px;
