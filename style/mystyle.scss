@@ -160,9 +160,9 @@ body {
   // padding-top: 1.5rem;
   width: 100vw;
   height: 100vh;
-  // @include px820 {
-  //   align-items: center;
-  // }
+  @include px820 {
+    height: fit-content;
+  }
 }
 
 .content-2 {
@@ -233,6 +233,10 @@ body {
   justify-content: center;
   // padding: 2rem 0;
   background-color: #e5e4e4;
+
+  @include px820 {
+    height: fit-content;
+  }
 
   img {
     width: 100%;
