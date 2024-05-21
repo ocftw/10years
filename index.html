@@ -18,6 +18,11 @@
     <section class="first-part">
       <div class="header">
         <img src="./media/img/Logo_Compact _White.png" alt="" class="logo" />
+        <!-- <div class="btn-group"> -->
+        <button class="header-btn">
+          <a href="https://ocftw.kktix.cc/events/festival2024"> 立即參與</a>
+        </button>
+        <!-- </div> -->
       </div>
     </section>
 
@@ -25,14 +30,14 @@
 
     <!-- section2 -->
     <section class="main-content">
-      <div class="btn-group">
-        <button>
-          <a href="https://ocftw.kktix.cc/events/festival2024"> 立即參與</a>
-        </button>
-      </div>
       <div class="content-2">
         <div class="text-area">
-          <img src="./media/img/2.png" alt="homePageimg1" class="swiper-img" />
+          <img
+            src="./media/img/2.png"
+            alt="homePageimg1"
+            class="swiper-img"
+            loading="lazy"
+          />
         </div>
 
         <div class="swiper-group">
@@ -42,23 +47,58 @@
 
               <div class="swiper-slide">
                 <img
-                  src="./media/img/3.png"
+                  src="./media/img/swiper_01.jpg"
                   alt="homePageimg2"
                   class="swiper-img"
+                  loading="lazy"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="./media/img/4.png"
+                  src="./media/img/swiper_02.jpg"
                   alt="homePageimg3"
                   class="swiper-img"
+                  loading="lazy"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="./media/img/5.png"
+                  src="./media/img/swiper_03.jpg"
                   alt="homePageimg4"
                   class="swiper-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/swiper_04.jpg"
+                  alt="homePageimg4"
+                  class="swiper-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/swiper_05.jpg"
+                  alt="homePageimg4"
+                  class="swiper-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/swiper_06.jpg"
+                  alt="homePageimg4"
+                  class="swiper-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./media/img/swiper_07.jpg"
+                  alt="homePageimg4"
+                  class="swiper-img"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -69,7 +109,7 @@
 
     <!-- section3 -->
     <section class="bottom">
-      <img src="./media/img/raise.png" alt="" id="targetImage" />
+      <img src="./media/img/raise.png" alt="" id="targetImage" loading="lazy" />
       <a
         data-flickr-embed="true"
         href="https://www.flickr.com/photos/ocftw/albums/72177720316928484"
@@ -77,16 +117,13 @@
         ><img
           src="https://live.staticflickr.com/65535/53717891280_fdf6a68cd5_z.jpg"
           alt="社群回顧展"
+          loading="lazy"
       /></a>
     </section>
   </body>
   <!-- 引入Swiper的JavaScript -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script
-    async
-    src="//embedr.flickr.com/assets/client-code.js"
-    charset="utf-8"
-  ></script>
+
   <script>
     // 初始化Swiper
     var swiper = new Swiper(".swiper-container", {
@@ -126,10 +163,48 @@
     }
 
     // 滾動事件處理器
+    // function scrollHandler(e) {
+    //   e.preventDefault();
+    //   if (e.deltaY < 0) navigateUp();
+    //   else navigateDown();
+    // }
+
+    let scrollTimeout = null;
+    let lastDirection = null;
+
     function scrollHandler(e) {
       e.preventDefault();
-      if (e.deltaY < 0) navigateUp();
-      else navigateDown();
+
+      let direction = e.deltaY < 0 ? "up" : "down";
+
+      // 如果方向改變了或者計時器未啟動
+      if (lastDirection !== direction || scrollTimeout === null) {
+        if (scrollTimeout !== null) {
+          clearTimeout(scrollTimeout);
+        }
+
+        if (direction === "up") {
+          navigateUp();
+        } else {
+          navigateDown();
+        }
+
+        lastDirection = direction;
+
+        scrollTimeout = setTimeout(() => {
+          scrollTimeout = null;
+          lastDirection = null;
+        }, 800); // 計時器設定為 0.8 秒
+      }
+    }
+
+    // 取得要監聽的 div 元素
+    var scrollableDiv = document.getElementById("scrollableDiv");
+
+    // 定義滾動事件處理器
+    function scrollHandler(e) {
+      // 在這裡放入滾動事件的處理邏輯
+      console.log("已滾動");
     }
 
     // 鍵盤事件處理器
@@ -203,4 +278,9 @@
       scrollPage();
     });
   </script>
+  <script
+    async
+    src="//embedr.flickr.com/assets/client-code.js"
+    charset="utf-8"
+  ></script>
 </html>

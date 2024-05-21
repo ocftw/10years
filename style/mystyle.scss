@@ -42,6 +42,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   justify-content: space-between;
+  content-visibility: auto;
 
   @include px768 {
     height: 65vh;
@@ -67,6 +68,7 @@ body {
 
 .header {
   width: 100%;
+  position: absolute;
   height: 10vh;
 }
 
@@ -114,6 +116,36 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header-btn {
+  border-radius: 60px;
+  padding: 0.3rem 0.9rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  background-color: transparent;
+  background-color: $color-5;
+  border: none;
+  cursor: pointer;
+  font-family: ChiroHeiHK_SB;
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease-in;
+  opacity: 0.7;
+  a {
+    color: $color-4;
+    text-decoration: none;
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+  }
+}
+button:hover {
+  opacity: 1;
 }
 
 .btn-group {

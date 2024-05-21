@@ -54,6 +54,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   justify-content: space-between;
+  content-visibility: auto;
 }
 @media (max-width: 768px) {
   .first-part {
@@ -78,6 +79,7 @@ body {
 
 .header {
   width: 100%;
+  position: absolute;
   height: 10vh;
 }
 
@@ -124,6 +126,35 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header-btn {
+  border-radius: 60px;
+  padding: 0.3rem 0.9rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  background-color: #0091da;
+  border: none;
+  cursor: pointer;
+  font-family: ChiroHeiHK_SB;
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease-in;
+  opacity: 0.7;
+}
+.header-btn a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.header-btn a:link,
+.header-btn a:visited,
+.header-btn a:active {
+  text-decoration: none;
+}
+
+button:hover {
+  opacity: 1;
 }
 
 .btn-group {
