@@ -45,24 +45,8 @@ body {
   content-visibility: auto;
 
   @include px768 {
-    height: 65vh;
     background-size: 100% 100%;
-  }
-}
-
-.first-part::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100vw + 18px);
-  height: 100%;
-  // background-color: rgba(255, 255, 255, 0.3);
-  // backdrop-filter: blur(4px);
-  // backdrop-filter: opacity(60%);
-
-  @include px768 {
-    height: 65%;
+    height: 55vh;
   }
 }
 

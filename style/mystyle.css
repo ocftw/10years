@@ -58,22 +58,8 @@ body {
 }
 @media (max-width: 768px) {
   .first-part {
-    height: 65vh;
     background-size: 100% 100%;
-  }
-}
-
-.first-part::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100vw + 18px);
-  height: 100%;
-}
-@media (max-width: 768px) {
-  .first-part::before {
-    height: 65%;
+    height: 55vh;
   }
 }
 
