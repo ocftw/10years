@@ -46,6 +46,7 @@ body {
 
   @include px768 {
     background-size: 100% 100%;
+    background-image: url(../media/img/KeyVision_v1_for_phone.png);
     height: 55vh;
   }
 }
