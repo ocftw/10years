@@ -30,21 +30,10 @@ img.maps {
 .index.content a:hover {
     color: #ffaae4;
     text-shadow: 1px 1px 1rem #e6ffe2;
-    box-shadow: 1px 1px 1rem #6450DC;
 }
 
 .index.content a.is-outlinedhover {
     border-width: 2.41px;
-}
-
-.index.content .tag {
-    border: 1px #ebecf6 solid;
-    box-shadow: 1px 1px 1rem #6450DC;
-}
-
-.index.content .tag span {
-    color: #ffffff;
-    text-shadow: 1px 1px 1rem #e6ffe2;
 }
 
 .section.music .columns .column img {
