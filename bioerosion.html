@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="theme-dark has-navbar-fixed-top" lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>
+      10 週年「開源祭」特別活動 | 開放文化基金會 Open Culture Foundation
+    </title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://10years.ocf.tw/" />
+    <meta
+      name="description"
+      content="林強最開放的電子音樂專輯，基于「開放」與「分享」兩大核心理念所創作的全新專輯《時間浸漬 BIOEROSION》。這張專輯是他繼 2005 年《驚蟄》之後，時隔 19 年再次在台灣推出的電子音樂作品，整張專輯是以環境音樂（Ambient Music）為基底，探索當代電子音樂的全新聲景、音畫，同時，也展現出林強對當代文化的深度思考，反映出他對網路自由與知識共享的最新看法。林強長期以來支持「台灣創用CC計劃」（Creative Commons Taiwan），他堅信知識和創作的自由流通是創意的源泉。因此，在這次「開源祭」中，他將《時間浸漬 BIOEROSION》以創用 CC 授權的方式，在 OCF 官網上免費開放下載，體現林強對創作自由和知識共享的承諾，也與 OCF 推動開放文化和數位公民社會的使命完美契合。"
+    />
+    <meta
+      property="og:description"
+      content="林強最開放的電子音樂專輯，基于「開放」與「分享」兩大核心理念所創作的全新專輯《時間浸漬 BIOEROSION》。這張專輯是他繼 2005 年《驚蟄》之後，時隔 19 年再次在台灣推出的電子音樂作品，整張專輯是以環境音樂（Ambient Music）為基底，探索當代電子音樂的全新聲景、音畫，同時，也展現出林強對當代文化的深度思考，反映出他對網路自由與知識共享的最新看法。林強長期以來支持「台灣創用CC計劃」（Creative Commons Taiwan），他堅信知識和創作的自由流通是創意的源泉。因此，在這次「開源祭」中，他將《時間浸漬 BIOEROSION》以創用 CC 授權的方式，在 OCF 官網上免費開放下載，體現林強對創作自由和知識共享的承諾，也與 OCF 推動開放文化和數位公民社會的使命完美契合。"
+    />
+    <meta
+      name="twitter:description"
+      content="林強最開放的電子音樂專輯，基于「開放」與「分享」兩大核心理念所創作的全新專輯《時間浸漬 BIOEROSION》。這張專輯是他繼 2005 年《驚蟄》之後，時隔 19 年再次在台灣推出的電子音樂作品，整張專輯是以環境音樂（Ambient Music）為基底，探索當代電子音樂的全新聲景、音畫，同時，也展現出林強對當代文化的深度思考，反映出他對網路自由與知識共享的最新看法。林強長期以來支持「台灣創用CC計劃」（Creative Commons Taiwan），他堅信知識和創作的自由流通是創意的源泉。因此，在這次「開源祭」中，他將《時間浸漬 BIOEROSION》以創用 CC 授權的方式，在 OCF 官網上免費開放下載，體現林強對創作自由和知識共享的承諾，也與 OCF 推動開放文化和數位公民社會的使命完美契合。"
+    />
+    <meta
+      property="og:image"
+      content="https://10years.ocf.tw/img/bioerosion.webp"
+    />
+    <meta
+      name="twitter:image"
+      content="https://10years.ocf.tw/img/bioerosion.webp"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="og:title"
+      content="時間浸漬 林強 開源概念專輯 即將預購 | 10 週年「開源祭」特別活動 財團法人開放文化基金會 (OCF)"
+    />
+    <meta
+      name="twitter:title"
+      content="時間浸漬 林強 開源概念專輯 即將預購 | 10 週年「開源祭」特別活動 財團法人開放文化基金會 (OCF)"
+    />
+    <link rel="icon" type="image/svg+xml" href="/img/ocf.png" />
+    <link rel="stylesheet" href="/css/bulma.min.css" />
+    <link rel="stylesheet" href="/fa/css/all.min.css" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <style>
+      :root {
+        --bulma-navbar-height: 0;
+      }
+
+      body,
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .bg {
+        background-image: url("/img/bioerosion.webp");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        animation: move 180s infinite;
+      }
+      .bg::before,
+      .bg::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit;
+        background-size: inherit;
+        background-position: inherit;
+        filter: blur(5px);
+        opacity: 1;
+        animation: trailingEffect 10s infinite;
+      }
+
+      .bg::after {
+        filter: blur(1px);
+        opacity: 0.7;
+        animation-delay: 0.5s;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translate(0, 0);
+        }
+        70% {
+          transform: scale(2, 1.5);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes trailingEffect {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          filter: blur(0);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+      .desc {
+        top: 5px;
+        width: 100%;
+
+        position: fixed;
+        text-shadow: 0 0 1rem black;
+        color: #ffffff;
+        font-size: small;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+      }
+
+      @media screen and (min-width: 1000px) {
+        .desc {
+          top: 50px;
+          left: 50px;
+          width: 50%;
+        }
+      }
+      @media screen and (min-width: 1201px) {
+        .desc {
+          top: 50px;
+          left: 50px;
+          width: 50%;
+        }
+      }
+      @media screen and (min-width: 1600px) {
+        .desc {
+          font-size: medium;
+        }
+      }
+      .desc h1 {
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 0 0 1rem #6450dc;
+        padding-bottom: 0.8rem;
+      }
+      .desc p {
+        padding-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="desc">
+      <div class="section">
+        <h1>《時間浸漬 BIOEROSION》：林強最開源的作品</h1>
+        <p>
+          在今年「開源祭」上，林強將正式推出他基于「開放」與「分享」兩大核心理念所創作的全新專輯《時間浸漬
+          BIOEROSION》。這張專輯是他繼 2005 年《驚蟄》之後，時隔 19
+          年再次在台灣推出的電子音樂作品，整張專輯是以環境音樂（Ambient
+          Music）為基底，探索當代電子音樂的全新聲景、音畫，同時，也展現出林強對當代文化的深度思考，反映出他對網路自由與知識共享的最新看法。林強長期以來支持「台灣創用CC計劃」（Creative
+          Commons
+          Taiwan），他堅信知識和創作的自由流通是創意的源泉。因此，在這次「開源祭」中，他將《時間浸漬
+          BIOEROSION》以創用 CC 授權的方式，在 OCF
+          官網上免費開放下載，體現林強對創作自由和知識共享的承諾，也與 OCF
+          推動開放文化和數位公民社會的使命完美契合。
+        </p>
+        <p>
+          林強鼓勵公眾不僅只是聆賞這張專輯，更希望大家能夠參與到音樂的再創作過程。他邀請所有音樂愛好者和創作者對《時間浸漬
+          BIOEROSION》進行 Remix 和再創作。這種開放的態度和創新的精神，正是創用
+          CC 和 OCF 所倡導的核心價值。
+        </p>
+        <p>
+          ※對創作者而言，容許、樂見並欣賞自己的作品被再創作或變形，是非常大器的行為。
+        </p>
+        <div class="buttons are-small">
+          <button class="button is-light">預計 8/13 募資計畫上線</button>
+          <button class="button is-light">線上搶先聽</button>
+        </div>
+        <figure class="image is-16by9">
+          <iframe
+            class="has-ratio"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/KFgQ0rk9DHM?si=lOth8t0YvwxdOd-x"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </figure>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <a href="https://ocf.tw/">
+            <img class="logo" src="/img/ocf_logo_white.svg" />
+          </a>
+        </p>
+        <p>財團法人開放文化基金會<br />Open Culture Foundation</p>
+      </div>
+    </footer>
+    <script src="/js/all.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-X3DG2E5E3W"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-X3DG2E5E3W");
+    </script>
+  </body>
+</html>
