@@ -112,9 +112,16 @@
         }
       }
       .desc {
-        top: 5px;
+        top: 20px;
         width: 100%;
         position: fixed;
+        transition: opacity 1s ease-out;
+      }
+      .desc.playing {
+        opacity: 0.2;
+      }
+      .desc.playing:hover {
+        opacity: 1;
       }
       .descarea {
         background-color: rgba(0, 0, 0, 0.1);
@@ -155,36 +162,49 @@
         border-radius: 8px;
         box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
       }
+      #player {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        user-select: none;
+        pointer-events: none;
+        aspect-ratio: 16/9;
+      }
     </style>
   </head>
   <body>
     <div class="bg"></div>
+    <div id="player"></div>
     <div class="desc">
       <div class="section">
         <div class="columns">
           <div class="colunm is-5 descarea">
             <h1>《時間浸漬 BIOEROSION》 林強最開源作品</h1>
-            <p>
-              在今年「開源祭」上，林強將正式推出他基于「開放」與「分享」兩大核心理念所創作的全新專輯《時間浸漬
-              BIOEROSION》。這張專輯是他繼 2005 年《驚蟄》之後，時隔 19
-              年再次在台灣推出的電子音樂作品，整張專輯是以環境音樂（Ambient
-              Music）為基底，探索當代電子音樂的全新聲景、音畫，同時，也展現出林強對當代文化的深度思考，反映出他對網路自由與知識共享的最新看法。林強長期以來支持「台灣創用CC計劃」（Creative
-              Commons
-              Taiwan），他堅信知識和創作的自由流通是創意的源泉。因此，在這次「開源祭」中，他將《時間浸漬
-              BIOEROSION》以創用 CC 授權的方式，在 OCF
-              官網上免費開放下載，體現林強對創作自由和知識共享的承諾，也與 OCF
-              推動開放文化和數位公民社會的使命完美契合。
-            </p>
-            <p>
-              林強鼓勵公眾不僅只是聆賞這張專輯，更希望大家能夠參與到音樂的再創作過程。他邀請所有音樂愛好者和創作者對《時間浸漬
-              BIOEROSION》進行 Remix
-              和再創作。這種開放的態度和創新的精神，正是創用 CC 和 OCF
-              所倡導的核心價值。
-            </p>
-            <p>
-              ※對創作者而言，容許、樂見並欣賞自己的作品被再創作或變形，是非常大器的行為。
-            </p>
-            <div class="buttons are-small" style="margin-bottom: -8px">
+            <div class="desc_content">
+              <p>
+                在今年「開源祭」上，林強將正式推出他基于「開放」與「分享」兩大核心理念所創作的全新專輯《時間浸漬
+                BIOEROSION》。這張專輯是他繼 2005 年《驚蟄》之後，時隔 19
+                年再次在台灣推出的電子音樂作品，整張專輯是以環境音樂（Ambient
+                Music）為基底，探索當代電子音樂的全新聲景、音畫，同時，也展現出林強對當代文化的深度思考，反映出他對網路自由與知識共享的最新看法。林強長期以來支持「台灣創用CC計劃」（Creative
+                Commons
+                Taiwan），他堅信知識和創作的自由流通是創意的源泉。因此，在這次「開源祭」中，他將《時間浸漬
+                BIOEROSION》以創用 CC 授權的方式，在 OCF
+                官網上免費開放下載，體現林強對創作自由和知識共享的承諾，也與 OCF
+                推動開放文化和數位公民社會的使命完美契合。
+              </p>
+              <p>
+                林強鼓勵公眾不僅只是聆賞這張專輯，更希望大家能夠參與到音樂的再創作過程。他邀請所有音樂愛好者和創作者對《時間浸漬
+                BIOEROSION》進行 Remix
+                和再創作。這種開放的態度和創新的精神，正是創用 CC 和 OCF
+                所倡導的核心價值。
+              </p>
+              <p>
+                ※對創作者而言，容許、樂見並欣賞自己的作品被再創作或變形，是非常大器的行為。
+              </p>
+            </div>
+            <div class="buttons are-small" style="margin-bottom: -5px">
               <button class="button is-light is-warning">
                 <span class="icon"><i class="far fa-clock"></i></span>
                 <span>預計 8/13 募資計畫上線</span>
@@ -199,22 +219,11 @@
                 >YouTube</a
               >
             </div>
-            <div id="player"></div>
           </div>
           <div class="column is-7"></div>
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <a href="https://ocf.tw/">
-            <img class="logo" src="/img/ocf_logo_white.svg" />
-          </a>
-        </p>
-        <p>財團法人開放文化基金會<br />Open Culture Foundation</p>
-      </div>
-    </footer>
     <script src="/js/all.js"></script>
     <script
       async
@@ -231,14 +240,18 @@
     <script>
       function onYouTubeIframeAPIReady() {
         var player = new YT.Player("player", {
-          height: "0",
-          width: "0",
+          height: "100%",
+          width: "100%",
           videoId: "KFgQ0rk9DHM",
           playerVars: {
-            controls: 1,
+            controls: 0,
             showinfo: 0,
             playlist: "KFgQ0rk9DHM",
             loop: 1,
+            frameBorder: 0,
+            iv_load_policy: 3,
+            playsinline: 0,
+            rel: 0,
           },
           events: {
             onReady: onPlayerReady,
@@ -263,6 +276,7 @@
         document.getElementById("pp").innerText = "請啟用瀏覽器的自動播放";
         document.getElementById("pp").classList.remove("is-loading");
       }
+
       var tag = document.createElement("script");
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName("script")[0];
@@ -272,9 +286,20 @@
         if (playerState === YT.PlayerState.PLAYING) {
           YT.get("player").pauseVideo();
           document.getElementById("pp").innerText = "► 播放";
+          document
+            .getElementsByClassName("desc_content")[0]
+            .classList.remove("is-hidden");
+          document
+            .getElementsByClassName("desc")[0]
+            .classList.remove("playing");
         } else {
           YT.get("player").playVideo();
           document.getElementById("pp").innerText = "⏸︎ 暫停";
+          document.getElementsByClassName("bg")[0].classList.add("is-hidden");
+          document
+            .getElementsByClassName("desc_content")[0]
+            .classList.add("is-hidden");
+          document.getElementsByClassName("desc")[0].classList.add("playing");
         }
       });
     </script>
