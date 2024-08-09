@@ -115,7 +115,7 @@
         top: 5px;
         width: 100%;
         position: fixed;
-        transition: opacity 1s ease-out;
+        transition: all 0.5s ease-in-out;
       }
       .desc.playing {
         top: 20px;
@@ -123,6 +123,13 @@
       }
       .desc.playing:hover {
         opacity: 1;
+      }
+      .desc .button.is-light {
+        box-shadow: 0 0 1rem #ffffff;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .desc .button.is-text {
+        color: black;
       }
       .descarea {
         background-color: rgba(0, 0, 0, 0.1);
@@ -148,7 +155,7 @@
           font-size: small;
         }
       }
-      .descarea h1 {
+      .descarea strong {
         font-weight: bold;
         font-size: medium;
         color: #ffffff;
@@ -182,40 +189,17 @@
       <div class="section">
         <div class="columns">
           <div class="colunm is-5 descarea">
-            <h1>《時間浸漬 BIOEROSION》 林強最開源作品</h1>
-            <div class="desc_content">
-              <p>
-                在今年「開源祭」上，林強將正式推出基于「開放」、「分享」兩大核心理念所創作的全新專輯《時間浸漬
-                BIOEROSION》。這張專輯是繼 2005 年《驚蟄》之後，時隔 19
-                年再次在台灣推出的電子音樂作品，整張專輯是以環境音樂（Ambient
-                Music）為基底，探索當代電子音樂全新聲景、音畫的同時，也展現出林強對當代文化的深度思考，反映出對網路自由與知識共享的最新看法。
-              </p>
-              <p>
-                林強長期以來支持「台灣創用 CC 計劃」（Creative Commons
-                Taiwan），他堅信知識和創作的自由流通是創意的源泉。因此，在這次「開源祭」中，他將《時間浸漬
-                BIOEROSION》以創用 CC 授權的方式，在 OCF
-                官網上免費開放下載，體現林強對創作自由和知識共享的承諾，也與 OCF
-                推動開放文化和數位公民社會的使命完美契合。
-              </p>
-              <p>
-                林強鼓勵公眾不僅只是聆賞這張專輯，更希望大家能夠參與音樂的再創作過程。他邀請所有音樂愛好者和創作者對《時間浸漬
-                BIOEROSION》進行 Remix
-                和再創作。開放的態度和創新的精神，正是創用 CC 和 OCF
-                所倡導的核心價值。
-                <small
-                  >※對創作者而言，容許、樂見並欣賞自己的作品被再創作或變形，是非常大器的行為。</small
-                >
-              </p>
-            </div>
-            <div class="buttons are-small" style="margin-bottom: -5px">
-              <button class="button is-rounded is-light is-outlined is-warning">
+            <div class="buttons are-small" style="margin-bottom: -3px">
+              <a
+                class="button is-rounded is-light is-outlined is-warning"
+                href="https://www.flyingv.cc/projects/35533"
+              >
                 <span class="icon"><i class="far fa-clock"></i></span>
                 <span>預計 8/13 募資計畫上線</span>
-              </button>
+              </a>
               <a
                 id="pp"
                 class="button is-rounded is-light is-outlined is-loading is-info"
-                style="box-shadow: 0 0 1rem #ffffff"
               >
                 <span class="icon"><i class="fas fa-headphones-alt"></i></span>
                 <span>線上搶先聽</span>
@@ -225,6 +209,24 @@
                 href="https://www.youtube.com/watch?v=KFgQ0rk9DHM"
                 >YouTube</a
               >
+            </div>
+            <div class="desc_content" style="margin-top: 12px">
+              <p>
+                開放文化基金會（Open Culture Foundation，簡稱
+                OCF）成立十週年，策劃以科技跨界為主題的盛典「開源祭」，將於 9 月
+                14 日（星期六）於 Pipe Live Music
+                及公館水岸廣場華麗登場，邀請多位知名音樂人及科技領域專家共同歡慶，探索未來科技與創意的無限可能。近期也壓軸公布與林強的共創計畫，林強將攜手義大利藝術家
+                Luca
+                Bonaccorsi，首次表演其基於「開放」與「分享」兩大核心理念所創作的全新專輯<strong
+                  >《時間浸漬 BIOEROSION》</strong
+                >，展現音樂及視覺藝術的創新融合。
+              </p>
+              <p>
+                此專輯為林強繼 2005 年《驚蟄》之後，時隔 19
+                年再次在臺灣推出的電子音樂作品。整張專輯採用 CC
+                授權方式發布，不僅鼓勵民眾以此為素材進行二次創作，更有限量彩膠同步在
+                flyingV 募資。
+              </p>
             </div>
           </div>
           <div class="column is-7"></div>
