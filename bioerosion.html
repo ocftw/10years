@@ -130,9 +130,14 @@
         font-size: small;
       }
 
-      @media screen and (min-width: 1600px) {
-        .descarea {
+      @media screen and (min-width: 920px) {
+        .descarea p {
           font-size: medium;
+        }
+      }
+      @media screen and (max-height: 600px) {
+        .descarea p {
+          font-size: small;
         }
       }
       .descarea h1 {
@@ -144,6 +149,7 @@
       }
       .descarea p {
         padding-bottom: 0.5rem;
+        line-height: 1.5rem;
       }
       .descarea figure iframe {
         border-radius: 8px;
@@ -187,6 +193,11 @@
                 <span class="icon"><i class="fas fa-headphones-alt"></i></span>
                 <span>線上搶先聽</span>
               </a>
+              <a
+                class="button is-text"
+                href="https://www.youtube.com/watch?v=KFgQ0rk9DHM"
+                >YouTube</a
+              >
             </div>
             <div id="player"></div>
           </div>
