@@ -1,6 +1,21 @@
 .navbar-item .buttons .button {
     text-shadow: 1px 1px 1rem #ffffff;
+    box-shadow: 0 0 1rem #ffffff;
+    animation: navbtnEffect 5s infinite;
 }
+
+@keyframes navbtnEffect {
+    0% {
+      box-shadow: 0 0 1rem #ffffff;
+    }
+    50% {
+      box-shadow: 0 0 0.7rem purple;
+      text-shadow: 1px 1px 1rem #00ffa6;
+    }
+    100% {
+        box-shadow: 0 0 1rem #ffffff;
+    }
+  }
 
 img.round {
     border-radius: 1rem;
