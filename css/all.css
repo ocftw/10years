@@ -94,3 +94,21 @@ img.maps {
     font-size: smaller;
     text-shadow: 1px 1px 5rem #6450DC;
 }
+
+.booth-recurit details summary {
+    padding-bottom: 15px;
+    cursor: pointer !important;
+}
+
+
+.booth-recurit details div {
+    padding-left: 18px;
+    padding-bottom: 18px;
+}
+
+.booth-recurit h2 {
+    color: #D0C9FF;
+}
+.booth-recurit h3 {
+    text-shadow: 0 0 1rem #00ff00;
+}
