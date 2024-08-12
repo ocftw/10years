@@ -95,20 +95,20 @@ img.maps {
     text-shadow: 1px 1px 5rem #6450DC;
 }
 
-.booth-recurit details summary {
+.booth-recruit details summary {
     padding-bottom: 15px;
     cursor: pointer !important;
 }
 
 
-.booth-recurit details div {
+.booth-recruit details div {
     padding-left: 18px;
     padding-bottom: 18px;
 }
 
-.booth-recurit h2 {
+.booth-recruit h2 {
     color: #D0C9FF;
 }
-.booth-recurit h3 {
+.booth-recruit h3 {
     text-shadow: 0 0 1rem #00ff00;
 }
