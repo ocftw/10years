@@ -112,3 +112,21 @@ img.maps {
 .booth-recruit h3 {
     text-shadow: 0 0 1rem #00ff00;
 }
+
+.booth-recruit .card {
+    box-shadow: 0 0 15px #ff73ff;
+    color: #eeefff;
+    text-shadow: 1px 1px 1rem #6450DC;
+}
+
+.booth-recruit .card a {
+    color: #00ff00;
+}
+
+.booth-recruit .card a:hover {
+    text-shadow: 0 0 15px #00ff00;
+}
+
+.booth-recruit .card .tag.is-warning {
+    box-shadow: 0 0 20px #f9b316;
+}
