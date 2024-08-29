@@ -130,3 +130,26 @@ img.maps {
 .booth-recruit .card .tag.is-warning {
     box-shadow: 0 0 20px #f9b316;
 }
+
+.footer .cologo {
+    height: 40px;
+}
+
+.footer .section p span.tag {
+    font-size: larger;
+}
+
+.footer .section p span.tag.is-link {
+    box-shadow: 0 0 1rem #6450DC;
+    border: 1px #6450DC solid;
+}
+
+.footer .section p span.tag.is-success {
+    box-shadow: 0 0 1rem #05a076;
+    border: 1px #05a076 solid;
+}
+
+.footer .section p span.tag.is-warning {
+    box-shadow: 0 0 1rem #a09b05;
+    border: 1px #a09b05 solid;
+}
