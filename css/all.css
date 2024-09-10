@@ -51,6 +51,15 @@ img.maps {
     border-width: 2.41px;
 }
 
+.perfer a {
+    text-shadow: 0 0 0.1rem #00ff00;
+    color: #ffffff;
+}
+
+.perfer a:hover {
+    text-shadow: 0 0 1rem #ff0000;
+}
+
 .section.music .columns .column img {
     border-radius: 0.3rem;
     border: 1px #e59cff solid;
