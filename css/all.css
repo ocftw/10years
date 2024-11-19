@@ -60,6 +60,10 @@ img.maps {
     text-shadow: 1px 1px 1rem #6450DC;
 }
 
+.theme-white .content {
+    color: #223322;
+}
+
 .index.content a {
     color: #ebecf6;
     text-shadow: 1px 1px 1rem #57ff3e;
@@ -121,6 +125,14 @@ img.maps {
         border: 1px #ab50dc solid;
     }
  }
+
+.theme-white .footer {
+    background-color: #ffffff;
+}
+
+.theme-white .columns .column p a {
+    font-size: 1.2rem;
+}
 
 .footer .content p img.logo {
     width: 150px;
