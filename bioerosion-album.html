@@ -102,17 +102,46 @@
     </style>
   </head>
   <body>
-    <div class="bg"></div>
-    <div id="player"></div>
     <div class="desc">
       <div class="section">
         <div class="columns">
-          <div class="column is-3"></div>
-          <div id="app" class="colunm is-6 descarea">
-            <div
-              class="box"
-              style="margin-bottom: 10px; font-size: small; color: #ffffff"
-            >
+          <div class="colunm descarea"></div>
+        </div>
+
+        <div class="column">
+          <div style="text-align: center; margin-bottom: 10px">
+            <span class="icon" style="color: #ffffff"
+              ><i class="fas fa-music" style="margin-right: 5px"></i>
+              <i class="fab fa-creative-commons" style="margin-right: 5px"></i>
+              <i class="fab fa-creative-commons-by"></i
+            ></span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-1"></div>
+          <div class="column is-6">
+            <div>
+              <figure class="image albumcover">
+                <img src="./img/album-cover.webp" />
+              </figure>
+            </div>
+            <div class="desc_content" style="margin: 12px auto">
+              <p style="margin-bottom: 10px">
+                開放文化基金會（Open Culture Foundation,
+                OCF）成立十週年，策劃以科技跨界為主題的盛典「開源祭」，邀請多位知名音樂人及科技領域專家共同歡慶，探索未來科技與創意的無限可能。林強與義大利藝術家
+                Luca
+                Bonaccorsi，推出基於「開放」與「分享」兩大核心理念所創作的全新專輯<strong
+                  >《時間浸漬 Bioerosion》</strong
+                >，展現音樂及視覺藝術的創新融合。
+              </p>
+              <p>
+                此專輯為林強繼 2005 年《驚蟄》之後，時隔 19
+                年再次在臺灣推出的電子音樂作品。整張專輯採用 CC-BY 4.0
+                授權方式發布，鼓勵民眾以此為素材進行二次創作。
+              </p>
+            </div>
+            <div class="desc_content" style="font-size: small; color: #ffffff">
               <p style="text-align: center; margin-bottom: 10px">
                 《時間浸漬 Bioerosion》專輯曲目、專輯封面採用<strong
                   >創用 CC 姓名標示（CC-BY 4.0）</strong
@@ -154,37 +183,10 @@
                 required.
               </p>
             </div>
+          </div>
+          <div class="column" id="app">
+            <!-- First block -->
 
-            <div>
-              <figure class="image albumcover">
-                <img src="./img/album-cover.webp" />
-              </figure>
-            </div>
-            <div class="desc_content" style="margin: 12px auto">
-              <p style="margin-bottom: 10px">
-                開放文化基金會（Open Culture Foundation,
-                OCF）成立十週年，策劃以科技跨界為主題的盛典「開源祭」，邀請多位知名音樂人及科技領域專家共同歡慶，探索未來科技與創意的無限可能。林強與義大利藝術家
-                Luca
-                Bonaccorsi，推出基於「開放」與「分享」兩大核心理念所創作的全新專輯<strong
-                  >《時間浸漬 Bioerosion》</strong
-                >，展現音樂及視覺藝術的創新融合。
-              </p>
-              <p>
-                此專輯為林強繼 2005 年《驚蟄》之後，時隔 19
-                年再次在臺灣推出的電子音樂作品。整張專輯採用 CC-BY 4.0
-                授權方式發布，鼓勵民眾以此為素材進行二次創作。
-              </p>
-            </div>
-            <div style="text-align: center; margin-bottom: 10px">
-              <span class="icon" style="color: #ffffff"
-                ><i class="fas fa-music" style="margin-right: 5px"></i>
-                <i
-                  class="fab fa-creative-commons"
-                  style="margin-right: 5px"
-                ></i>
-                <i class="fab fa-creative-commons-by"></i
-              ></span>
-            </div>
             <div class="box track" v-cloak>
               <div class="columns">
                 <div class="column is-7">
@@ -689,6 +691,12 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="column is-1"></div>
+        </div>
+        <div class="columns">
+          <div class="column is-3"></div>
+          <div class="column">
             <div style="text-align: center">
               <span class="icon" style="color: #ffffff"
                 ><i class="fas fa-music" style="margin-right: 5px"></i
