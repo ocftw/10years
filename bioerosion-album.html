@@ -974,11 +974,14 @@
         },
       ]);
 
-      function allstop() {
+      function allstop(org_track) {
         tracks.forEach((track) => {
           if (track && track.audio && track.status == "play") {
-            track.audio.pause();
-            track.status = "pause";
+            if (track != org_track) {
+              track.audio.pause();
+              track.status = "no";
+              track.audio = null;
+            }
           }
         });
       }
@@ -991,7 +994,7 @@
         },
         methods: {
           play($event, track) {
-            allstop();
+            allstop(track);
             if (tracks[track].audio === null) {
               tracks[track].audio = new Audio(tracks[track].src);
             }
