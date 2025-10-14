@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html class="theme-white" lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>
+      科技征途：無硝煙的自由戰⸺開源運動在臺灣，OCF 十週年特展 | 開放文化基金會 Open Culture Foundation
+    </title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://10years.ocf.tw/exhibition/" />
+    <meta
+      name="description"
+      content="探索臺灣開源運動的輝煌歷程！從 1980 年代 GNU 計畫到 2024 年 AI 浪潮，見證開源人如何打破科技封建、推動自由開放。OCF 十週年特展帶您走過 40 年開源史，從 Linux 到公民科技，從程式碼到社會改變，一場無硝煙的自由戰正在進行中！"
+    />
+    <meta
+      property="og:description"
+      content="探索臺灣開源運動的輝煌歷程！從 1980 年代 GNU 計畫到 2024 年 AI 浪潮，見證開源人如何打破科技封建、推動自由開放。OCF 十週年特展帶您走過 40 年開源史，從 Linux 到公民科技，從程式碼到社會改變，一場無硝煙的自由戰正在進行中！"
+    />
+    <meta
+      name="twitter:description"
+      content="探索臺灣開源運動的輝煌歷程！從 1980 年代 GNU 計畫到 2024 年 AI 浪潮，見證開源人如何打破科技封建、推動自由開放。OCF 十週年特展帶您走過 40 年開源史，從 Linux 到公民科技，從程式碼到社會改變，一場無硝煙的自由戰正在進行中！"
+    />
+    <meta
+      property="og:image"
+      content="https://10years.ocf.tw/img/10years_banner.webp"
+    />
+    <meta
+      name="twitter:image"
+      content="https://10years.ocf.tw/img/10years_banner.webp"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="og:title"
+      content="科技征途：無硝煙的自由戰⸺開源運動在臺灣，OCF 十週年特展 | 開放文化基金會 Open Culture Foundation"
+    />
+    <meta
+      name="twitter:title"
+      content="科技征途：無硝煙的自由戰⸺開源運動在臺灣，OCF 十週年特展 | 開放文化基金會 Open Culture Foundation"
+    />
+    <link rel="icon" type="image/svg+xml" href="/img/ocf.png" />
+    <link rel="stylesheet" href="/css/bulma.min.css" />
+    <link rel="stylesheet" href="/fa/css/all.min.css" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <style>
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: white;
+        }
+      }
+
+      /* 雙欄時間軸樣式 */
+      .timeline-dual {
+        position: relative;
+        padding: 2rem 0;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .timeline-dual::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #6450DC;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+
+      .timeline-year-marker {
+        text-align: center;
+        margin: 3rem 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .timeline-year-marker h2 {
+        font-size: 2.5rem;
+        color: #6450DC;
+        background: white;
+        padding: 0 2rem;
+        display: inline-block;
+        border-radius: 2rem;
+        box-shadow: 0 2px 10px rgba(100, 80, 220, 0.2);
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .year-milestone-info {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        box-shadow: 0 4px 15px rgba(100, 80, 220, 0.3);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .milestone-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .milestone-item {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        text-align: center;
+      }
+
+      .milestone-item strong {
+        display: block;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .milestone-item span {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .timeline-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+        position: relative;
+      }
+
+      .timeline-left {
+        text-align: right;
+        padding-right: 2rem;
+      }
+
+      .timeline-right {
+        text-align: left;
+        padding-left: 2rem;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin: 1.5rem 0;
+      }
+
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 1rem;
+        width: 1rem;
+        height: 1rem;
+        background: #6450DC;
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0 0 0 3px #6450DC;
+        z-index: 3;
+      }
+
+      .timeline-item::before {
+        top: 1.75rem;
+      }
+
+      .timeline-left .timeline-item::before {
+        right: -3.5rem;
+      }
+
+      .timeline-right .timeline-item::before {
+        left: -3.5rem;
+      }
+
+
+      /* 時期說明區塊樣式 */
+      .period-intro {
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+        border: 2px solid #6450DC;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 2rem 0;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .period-intro h3 {
+        font-size: 1.5rem;
+        color: #6450DC;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .period-intro p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 1rem;
+        text-align: justify;
+      }
+
+      .period-intro p:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-content {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border: 4px solid #6450DC;
+        border-width: 0 4px 0 4px;
+      }
+
+      .timeline-left .timeline-content {
+        border-left: none;
+        /* border-right: 4px solid #6450DC; */
+      }
+
+      .timeline-right .timeline-content {
+        /* border-left: 4px solid #00A896; */
+        border-right: none;
+      }
+
+      /* OCF 事件使用漸層邊框 */
+      .timeline-right .timeline-item[data-category="ocf"] .timeline-content {
+        border-left: 4px solid;
+        border-image: linear-gradient(135deg, #00A896 0%, #6450DC 100%) 1;
+      }
+
+      .timeline-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.875rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-badge.international {
+        background: #6450DC;
+        color: white;
+      }
+
+      .timeline-badge.taiwan {
+        background: #6450DC;
+        color: white;
+      }
+
+      .timeline-badge.ocf {
+        background: linear-gradient(135deg, #00A896 0%, #6450DC 100%);
+      }
+
+      .timeline-year {
+        display: none;
+        /* font-size: 1.5rem;
+        font-weight: bold;
+        color: #6450DC;
+        margin-bottom: 0.5rem; */
+      }
+
+      .timeline-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .timeline-description {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .timeline-knowledge {
+        background: #fff9e6;
+        border-left: 3px solid #ffc107;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+      }
+
+      .timeline-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        transition: all 0.3s ease;
+      }
+
+      .timeline-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+
+      figure a {
+        display: block;
+        cursor: pointer;
+      }
+
+      figure a:hover .timeline-image {
+        transform: scale(1.02);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+
+      .timeline-links {
+        margin-top: 1rem;
+      }
+
+      .timeline-links a {
+        color: #6450DC;
+        text-decoration: none;
+        margin-right: 1rem;
+      }
+
+      .timeline-links a:hover {
+        text-decoration: underline;
+      }
+
+      .period-intro {
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+        padding: 2rem;
+        border-radius: 0.5rem;
+        margin: 3rem 0;
+        border-left: 4px solid #6450DC;
+        text-align: center;
+      }
+
+      .period-intro h3 {
+        font-size: 1.5rem;
+        color: #6450DC;
+        margin-bottom: 1rem;
+      }
+
+      .period-intro p {
+        color: #666;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 768px) {
+        .timeline-dual::before {
+          left: 1rem;
+        }
+
+        .timeline-row {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-left {
+          text-align: left;
+          padding-right: 0;
+          padding-left: 3rem;
+        }
+
+        .timeline-right {
+          padding-left: 3rem;
+        }
+
+        .timeline-item::before {
+          left: 0.5rem !important;
+          right: auto !important;
+        }
+
+        .timeline-content {
+          border-left: 4px solid #6450DC !important;
+          border-right: none !important;
+        }
+
+        .milestone-content {
+          grid-template-columns: 1fr;
+        }
+
+        .milestone-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .exhibition-text {
+          text-align: left;
+        }
+
+        .ocf-description {
+          text-align: left;
+        }
+      }
+
+
+      .back-button {
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        background: #6450DC;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 2px 10px rgba(100, 80, 220, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-button:hover {
+        background: #5a46c7;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(100, 80, 220, 0.4);
+        color: white;
+      }
+
+      .reference-section {
+        background: #f8f9fa;
+        padding: 3rem 0;
+        margin-top: 3rem;
+      }
+
+      .reference-title {
+        font-size: 1.8rem;
+        color: #6450DC;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .reference-list {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .reference-list li {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .reference-list a {
+        color: #6450DC;
+        text-decoration: none;
+      }
+
+      .reference-list a:hover {
+        text-decoration: underline;
+      }
+
+      /* 策展論述樣式 */
+      .exhibition-intro {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        background: white;
+      }
+
+      .exhibition-main-title {
+        font-size: 2.5rem;
+        color: #6450DC;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .exhibition-sub-title {
+        font-size: 1.5rem;
+        color: #00A896;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .exhibition-quote {
+        font-size: 1.2rem;
+        color: #666;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 2rem;
+      }
+
+      .exhibition-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+      }
+
+      .knowledge-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      /* 策展人樣式 */
+      .curator-section {
+        background: #f8f9fa;
+        padding: 3rem 0;
+      }
+
+      .curator-title {
+        font-size: 2rem;
+        color: #6450DC;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .curator-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .curator-logo {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .ocf-logo {
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .ocf-logo:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+
+      .logo-caption {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .curator-info {
+        text-align: center;
+      }
+
+      .ocf-title {
+        font-size: 1.8rem;
+        color: #6450DC;
+        margin-bottom: 1rem;
+      }
+
+      .ocf-symbol {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 1.5rem;
+      }
+
+      .ocf-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .core-areas-title {
+        font-size: 1.5rem;
+        color: #00A896;
+        margin: 2rem 0 1rem 0;
+      }
+
+      .core-areas-intro {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 1.5rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .core-areas-image {
+        margin: 2rem 0;
+      }
+
+      .core-areas-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+
+      .core-areas-img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+
+      .image-caption {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.5rem;
+      }
+
+      .ocf-additional-img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        border-radius: 0.5rem;
+      }
+
+      /* 結語樣式 */
+      .conclusion-section {
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+        padding: 4rem 0;
+        margin-top: 3rem;
+      }
+
+      .conclusion-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .conclusion-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 2rem;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/" class="back-button">
+      <i class="fas fa-arrow-left"></i> 返回首頁
+    </a>
+
+    <!-- 策展論述 -->
+    <section class="exhibition-intro">
+      <div class="container">
+        <h2 class="exhibition-main-title">科技征途：無硝煙的自由戰</h2>
+        <h3 class="exhibition-sub-title">開源運動在臺灣｜OCF 十週年特展</h3>
+        <p class="exhibition-quote">⸺打破科技與軟體封建，一場令人熱血沸騰的開放世界冒險⸺</p>
+
+        <p class="exhibition-text">
+          <em>1989⸺一個象徵自由的年代，處處都在為破除集權和獨裁，鳴響關鍵一槍。</em><br>
+          <em>現實的另一端，虛擬的網路軟體世界，也在打破壟斷、封閉的生態，爭取自由開放，揮起革命大旗。</em>
+        </p>
+
+        <p class="exhibition-text">
+          在這個實體 MMORPG 遊戲中，你將化身為「開源人」，踏遍臺灣的雲端伺服器，展開一場場打怪任務，逐步攻克傳統商業軟體和閉源軟體的堡壘，開拓自由世界的疆域。開源人們穿梭於現實與虛擬，不斷迎接封建傳統的異世界挑戰；但他們無所畏懼，無論單打獨鬥或團隊行動，為了推動軟體技術和網路的開放普及，創造自由的未來而拚搏。
+        </p>
+
+        <p class="exhibition-text">
+          隨著遊戲進展，你將走入「開源運動在臺灣」的輝煌歷程，見證無數勇敢的開源人，如同冒險者越洋取經，完成全球各地推廣開源的游擊任務，並像遊戲中的公會與結盟般，在臺灣組建起一個個活躍的開放科技社群，共同成就今天的開源環境。
+        </p>
+
+        <p class="exhibition-text">
+          有人在前線奮戰，總有人要幫補⸺開放文化基金會自 2014 年起正式擔任補師角色，承載開源社群的期待和共識，化為推動開放精神的幕後舵手。十年間，基金會支持社群的壯大發展，在各界發揚開源精神，作為臺灣開源人的前鋒與後盾，攜手走過無數風雨，逼退封閉勢力，讓「開放」在臺灣生根蓬勃。
+        </p>
+
+        <p class="exhibition-text">
+          開源人們也逐漸意識到，開放科技已不僅僅是必需的基礎設施，更是資通訊產業的推動力。冒險者們竭力於影響社會環境⸺這個從游牧到很多聚集發生的「臺北」，至今也從王國 NPC 手中，獲取各種城市運作的儀表板技術文件及原始碼，邀請更多不同的可以以自由開放精神，也打造出屬於自己的智慧城市。這場遊戲正在持續更新，為玩家們帶來更加自由無垠的虛擬世界。
+        </p>
+
+        <p class="exhibition-text">
+          現在，歡迎走進「科技征途：無硝煙的自由戰．開源運動在臺灣｜OCF 十週年特展」，在「社群回憶錄：開源運動在臺灣」中，邀請每個參觀者，和我們一同以行動策展的方式，共同探索「開源人」們在臺灣和世界各地的精彩故事，同時也歡迎貢獻你知道的記憶篇章；到「開源繁星錄」中，一窺來自過去、未來與遠方，自由星空下的里程碑和 OCF 的祝願。成為這場開源革命的一部分，開啟你的科技歷險！
+        </p>
+
+        <!-- 小知識框 -->
+        <div class="knowledge-box">
+          <strong>本展所提及之「開源軟體」</strong>，為「自由與開放原始碼軟體」之統稱，泛指採用經自由軟體基金會或開放源碼促進會所認可的授權條款釋出，以供大眾自由利用的軟體或科技。
+        </div>
+
+        <div class="knowledge-box">
+          <strong>社群</strong>是一群有共同興趣和志向，聚在一起實體或網路上討論的人們。社群的討論主題多元且具遊牧的特性，常見的方式是透過網路討論議題、咖啡店內小聚會，大活動（CON）則是社群的大型見面會。
+        </div>
+
+        <div class="knowledge-box">
+          <strong>無論是公民科技或是開源社群</strong>，重要記憶眾多且本展篇幅有限，無法涵蓋所有事件，在此特別說明。歡迎在現場的你，發揮開源與自由貢獻精神，透過我們的互動方式，貢獻你知道的社群和記憶哦！
+        </div>
+      </div>
+    </section>
+
+    <!-- 策展人資訊 -->
+    <section class="curator-section">
+      <div class="container">
+        <h2 class="curator-title">策展人</h2>
+
+        <div class="curator-content">
+          <div class="curator-logo">
+            <a href="https://ocf.tw/mediakit/logo.png" target="_blank" rel="noopener noreferrer">
+              <img src="images/image2.png" alt="開放文化基金會 Logo" class="ocf-logo">
+            </a>
+            <p class="logo-caption">
+              <a href="https://ocf.tw/mediakit/logo.png" target="_blank">圖片下載連結</a>
+            </p>
+          </div>
+
+          <div class="curator-info">
+            <h3 class="ocf-title">開放文化基金會（Open Culture Foundation, OCF）</h3>
+            <img src="images/image3.png" alt="OCF 標誌" class="ocf-symbol">
+
+            <p class="ocf-description">
+              開放文化基金會（Open Culture Foundation, OCF）是一個非營利性組織。透過推廣開放科技和跨界合作，在臺灣持續的銜繫科技社群與其他公／私領域，來保障開放共創的數位人權、支持透明涵融的數位公民社會。
+            </p>
+
+            <p class="ocf-description">
+              所謂開放科技，是開放源碼、開放資料及開放政府三個概念的集合，指數位世界的建構、資料收集及政府治理皆以公開、透明及眾人參與的方式執行，能更有效地促進數位人權和網路自由的落實，進而達到數位公民社會的實現。
+            </p>
+
+            <p class="ocf-description">
+              自 2014 年創立以來，OCF 以法人做為組織形式，支持臺灣 40 多個開放科技社群，在過程中，不僅是持續性的推廣開放科技概念，OCF 也開始參與政策倡議，為眾人的數位人權發聲，進而創建出在臺灣發展開放科技的基地。然而，這些成果並非由開放文化基金會獨立實現，而是透過科技社群和公民夥伴一起促使臺灣的數位／網路環境變得更加公開、透明，利於公眾參與。
+            </p>
+
+            <h4 class="core-areas-title">OCF 五大核心領域</h4>
+            <p class="core-areas-intro">
+              開放文化基金會透過推動下述之五大領域來達成數位公民社會的實現和應對數位時代各項威脅的可能。
+            </p>
+
+            <div class="core-areas-image">
+              <a href="https://ocf.tw/p/test/main%20areas.png" target="_blank" rel="noopener noreferrer">
+                <img src="images/image4.png" alt="OCF 五大核心領域" class="core-areas-img">
+              </a>
+              <p class="image-caption">
+                <a href="https://ocf.tw/p/test/main%20areas.png" target="_blank">圖片下載連結</a>
+              </p>
+            </div>
+
+            <img src="images/image5.png" alt="OCF 相關圖片" class="ocf-additional-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <main>
+        <section class="timeline-dual" id="timeline-container">
+          <!-- Timeline items will be loaded dynamically -->
+        </section>
+
+        <!-- 結語 -->
+        <section class="conclusion-section">
+          <div class="container">
+            <div class="conclusion-content">
+              <p class="conclusion-text">
+                回顧開源世界的發展歷程，最初的開源軟體隨著學術研究的自由精神在軟體實驗室和研究機構中迅速成長。然而，當微軟創辦人比爾·蓋茲因不滿軟體被無償複製，發表了著名的「致愛好者的公開信」，呼籲保護軟體著作權後，軟體開發的主流逐漸轉向封閉。儘管如此，開源社群始終堅守「自由與分享」的理念，並明確定義開源精神，讓協力與開放文化，打破閉鎖的主流，驅動商業與科技的發展。
+              </p>
+
+              <p class="conclusion-text">
+                進入 2000 年後，隨著數位技術與現實生活逐漸融合，人與人工智慧共存的智慧城市開始崛起，開源精神也逐步滲透到生活和市政的各個層面。然而，面對 2024 年的 AI 浪潮，新興科技帶來的挑戰也日益嚴峻，人工智慧的開源與封閉之爭持續升溫。天下無難事，只因天下還有「開源人」。開源的冒險者們那份對開放與自由的堅持，將繼續突破重重難關，引領科技的未來。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="reference-section">
+          <div class="container">
+            <h2 class="reference-title">參考資料</h2>
+            <ul class="reference-list">
+              <li>Abel Samot. 2023/10/11. The evolution of the Open Source market & how Fair Code is taking over. Retrieved from: <a href="https://medium.com/red-river-west/the-evolution-of-the-open-source-market-how-fair-code-is-taking-over-6c406570c63f" target="_blank">https://medium.com/red-river-west/the-evolution-of-the-open-source-market-how-fair-code-is-taking-over-6c406570c63f</a></li>
+              <li>Codemotion. 2023/2/24. Infographic: The History of Open Source. Retrieved from: <a href="https://www.codemotion.com/magazine/infographics/the-history-of-open-source/" target="_blank">https://www.codemotion.com/magazine/infographics/the-history-of-open-source/</a></li>
+              <li>Asumo Pal. History of Open Source Software. Retrieved from: <a href="https://www.btw.so/blog/history-of-open-source-software/" target="_blank">https://www.btw.so/blog/history-of-open-source-software/</a></li>
+              <li>Tech Musings. 2010/1/15. The 9 most important events in Open Source history. Retrieved from: <a href="https://www.pingdom.com/blog/the-9-most-important-events-in-open-source-history/" target="_blank">https://www.pingdom.com/blog/the-9-most-important-events-in-open-source-history/</a></li>
+              <li>Jimmy C. 2023/12/1. 給普通人的 open source 簡史 (上). Retrieved from: <a href="https://medium.com/@jimmy.kcchiang/%E7%B5%A6%E6%99%AE%E9%80%9A%E4%BA%BA%E7%9A%84-open-source-%E7%B0%A1%E5%8F%B2-%E4%B8%8A-2c82730e9539" target="_blank">https://medium.com/@jimmy.kcchiang/給普通人的-open-source-簡史-上-2c82730e9539</a></li>
+              <li>蕭葦華。2023/12/05。十年之旅：摩茲工寮，與台灣社群的不凡歷程｜SITCON 社群推廣系列. Retrieved from: <a href="https://medium.com/sitcon/%E5%8D%81%E5%B9%B4%E4%B9%8B%E6%97%85-%E6%91%A9%E8%8C%B2%E5%B7%A5%E5%AF%AE-%E8%88%87%E8%87%BA%E7%81%A3%E7%A4%BE%E7%BE%A4%E7%9A%84%E4%B8%8D%E5%87%A1%E6%AD%B7%E7%A8%8B-sitcon-%E7%A4%BE%E7%BE%A4%E6%8E%A8%E5%BB%A3%E7%B3%BB%E5%88%97-619169b2637f" target="_blank">https://medium.com/sitcon/十年之旅：摩茲工寮，與台灣社群的不凡歷程｜SITCON-社群推廣系列-619169b2637f</a></li>
+              <li>Wayne。2013/10/23。Kaohsiung Linux User Group (KaLUG) 創辦人 Lloyd 專訪。Retrieved from: <a href="https://appshooting.com.tw/2013/10/kaohsiung-linux-user-group-kalug-lloyd/" target="_blank">https://appshooting.com.tw/2013/10/kaohsiung-linux-user-group-kalug-lloyd/</a></li>
+              <li><a href="https://taipei-wikipedian.blogspot.com/2012/02/osm-tw-2012-mapping-party-1.html" target="_blank">https://taipei-wikipedian.blogspot.com/2012/02/osm-tw-2012-mapping-party-1.html</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <a href="https://ocf.tw/">
+            <img class="logo" src="/img/ocf_logo_purple.svg" />
+          </a>
+        </p>
+        <p>財團法人開放文化基金會<br />Open Culture Foundation</p>
+      </div>
+    </footer>
+
+    <script>
+      // 十年里程碑資料
+      const decadeMilestones = {
+        1980: {
+          speed: '2,400bps',
+          web: 'BBS、Usenet 靜態網路',
+          software: 'MSDOS'
+        },
+        1990: {
+          speed: '56kbps 數據機、ISDN',
+          web: 'WEB1，單向網頁',
+          software: 'Windows, Google, PTT'
+        },
+        2000: {
+          speed: 'DSL 100 Mbps',
+          web: 'WEB2，互動網頁',
+          software: 'YouTube, Facebook, LINE, iPhone'
+        },
+        2010: {
+          speed: '光纖 1,000 Mbps',
+          web: 'Web3，區塊鏈',
+          software: 'Instagram, Uber, Zoom'
+        },
+        2020: {
+          speed: '1 Gbps',
+          web: 'AI 發展',
+          software: 'ChatGPT'
+        }
+      };
+
+      async function loadTimeline() {
+        try {
+          const response = await fetch('timeline-data.json');
+          const data = await response.json();
+          const container = document.getElementById('timeline-container');
+
+          // 將事件按年份分組
+          const eventsByYear = {};
+          const periodIntros = {};
+          data.timeline.forEach(item => {
+            if (!eventsByYear[item.year]) {
+              eventsByYear[item.year] = { international: [], taiwan: [] };
+            }
+            if (item.category === 'period_intro') {
+              periodIntros[item.year] = item;
+            } else if (item.type === 'international') {
+              eventsByYear[item.year].international.push(item);
+            } else if (item.type === 'taiwan') {
+              eventsByYear[item.year].taiwan.push(item);
+            }
+          });
+
+          // 確保年代年份存在於時間軸中
+          const decadeYears = [1980, 1990, 2000, 2010, 2020];
+          decadeYears.forEach(decadeYear => {
+            if (!eventsByYear[decadeYear]) {
+              eventsByYear[decadeYear] = { international: [], taiwan: [] };
+            }
+          });
+
+          // 按年份排序並生成
+          const sortedYears = Object.keys(eventsByYear).sort((a, b) => parseInt(a) - parseInt(b));
+
+          sortedYears.forEach((year, index) => {
+            // 創建年份標記（已整合年代資訊）
+            container.appendChild(createYearMarker(year));
+
+            // 如果有 period_intro，先顯示它（橫跨兩欄）
+            if (periodIntros[year]) {
+              container.appendChild(createPeriodIntro(periodIntros[year]));
+            }
+
+            // 創建左右雙欄
+            const row = createTimelineRow(
+              eventsByYear[year].international,
+              eventsByYear[year].taiwan
+            );
+            container.appendChild(row);
+          });
+        } catch (error) {
+          console.error('Error loading timeline:', error);
+        }
+      }
+
+      function createYearMarker(year) {
+        const marker = document.createElement('div');
+        marker.className = 'timeline-year-marker';
+        marker.setAttribute('data-year', year);
+
+        const h2 = document.createElement('h2');
+        h2.textContent = year;
+        marker.appendChild(h2);
+
+        // 檢查是否為確切的年代年份（1980、1990、2000、2010、2020）
+        const decadeYears = [1980, 1990, 2000, 2010, 2020];
+        if (decadeYears.includes(parseInt(year))) {
+          const decade = parseInt(year);
+          const milestoneInfo = document.createElement('div');
+          milestoneInfo.className = 'year-milestone-info';
+
+          const decadeTitle = document.createElement('h3');
+          decadeTitle.textContent = `${decade}年代`;
+          decadeTitle.style.fontSize = '1.2rem';
+          decadeTitle.style.marginBottom = '1rem';
+          decadeTitle.style.fontWeight = 'bold';
+          milestoneInfo.appendChild(decadeTitle);
+
+          const grid = document.createElement('div');
+          grid.className = 'milestone-grid';
+
+          // 網路速度
+          const speedItem = document.createElement('div');
+          speedItem.className = 'milestone-item';
+          speedItem.innerHTML = '<strong>網路速度</strong><span>' + decadeMilestones[decade].speed + '</span>';
+          grid.appendChild(speedItem);
+
+          // WEB 發展
+          const webItem = document.createElement('div');
+          webItem.className = 'milestone-item';
+          webItem.innerHTML = '<strong>WEB 發展</strong><span>' + decadeMilestones[decade].web + '</span>';
+          grid.appendChild(webItem);
+
+          // 當紅軟體
+          const softwareItem = document.createElement('div');
+          softwareItem.className = 'milestone-item';
+          softwareItem.innerHTML = '<strong>當紅軟體</strong><span>' + decadeMilestones[decade].software + '</span>';
+          grid.appendChild(softwareItem);
+
+          milestoneInfo.appendChild(grid);
+          marker.appendChild(milestoneInfo);
+        }
+
+        return marker;
+      }
+
+      function createTimelineRow(internationalEvents, taiwanEvents) {
+        const row = document.createElement('div');
+        row.className = 'timeline-row';
+
+        // 左側：國際事件
+        const leftColumn = document.createElement('div');
+        leftColumn.className = 'timeline-left international';
+
+        internationalEvents.forEach(item => {
+          leftColumn.appendChild(createTimelineItem(item));
+        });
+
+        // 右側：台灣事件
+        const rightColumn = document.createElement('div');
+        rightColumn.className = 'timeline-right taiwan';
+
+        taiwanEvents.forEach(item => {
+          rightColumn.appendChild(createTimelineItem(item));
+        });
+
+        row.appendChild(leftColumn);
+        row.appendChild(rightColumn);
+
+        return row;
+      }
+
+
+      function createTimelineItem(item) {
+        const article = document.createElement('article');
+        article.className = 'timeline-item';
+        article.setAttribute('data-year', item.year);
+        article.setAttribute('data-type', item.type);
+        if (item.isOCF) {
+          article.setAttribute('data-is-ocf', 'true');
+        }
+
+        const content = document.createElement('div');
+        content.className = 'timeline-content';
+
+        // Badge
+        const badge = document.createElement('div');
+        badge.className = 'timeline-badge';
+        if (item.type === 'international') {
+          badge.classList.add('international');
+          badge.textContent = '國際';
+        } else if (item.type === 'taiwan') {
+          badge.classList.add('taiwan');
+          if (item.isOCF) {
+            badge.classList.add('ocf');
+            badge.textContent = 'OCF';
+          } else {
+            badge.textContent = '臺灣';
+          }
+        }
+        content.appendChild(badge);
+
+        // Year
+        const year = document.createElement('time');
+        year.className = 'timeline-year';
+        year.setAttribute('datetime', item.year);
+        year.textContent = item.year;
+        content.appendChild(year);
+
+        // Title
+        const title = document.createElement('h3');
+        title.className = 'timeline-title';
+        title.textContent = item.title;
+        content.appendChild(title);
+
+        // Description
+        const description = document.createElement('p');
+        description.className = 'timeline-description';
+        description.textContent = item.description;
+        content.appendChild(description);
+
+        // Knowledge
+        if (item.knowledge) {
+          const knowledge = document.createElement('div');
+          knowledge.className = 'timeline-knowledge';
+          knowledge.innerHTML = `<strong>小知識</strong>：${item.knowledge}`;
+          content.appendChild(knowledge);
+        }
+
+        // Images
+        if (item.images && item.images.length > 0) {
+          item.images.forEach(img => {
+            if (img.src) {
+              const figure = document.createElement('figure');
+
+              // 如果有連結，將圖片包在連結中
+              if (img.link) {
+                const link = document.createElement('a');
+                link.href = img.link;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+
+                const image = document.createElement('img');
+                image.src = img.src;
+                image.alt = img.alt || '';
+                image.className = 'timeline-image';
+                link.appendChild(image);
+                figure.appendChild(link);
+              } else {
+                const image = document.createElement('img');
+                image.src = img.src;
+                image.alt = img.alt || '';
+                image.className = 'timeline-image';
+                figure.appendChild(image);
+              }
+
+              if (img.credit) {
+                const caption = document.createElement('figcaption');
+                caption.textContent = img.credit;
+                figure.appendChild(caption);
+              }
+
+              content.appendChild(figure);
+            }
+          });
+        }
+
+        // Links
+        if (item.links && item.links.length > 0) {
+          const linksDiv = document.createElement('div');
+          linksDiv.className = 'timeline-links';
+          item.links.forEach(link => {
+            const a = document.createElement('a');
+            a.href = link;
+            a.textContent = '相關連結';
+            a.target = '_blank';
+            linksDiv.appendChild(a);
+          });
+          content.appendChild(linksDiv);
+        }
+
+        article.appendChild(content);
+        return article;
+      }
+
+      function createPeriodIntro(item) {
+        const section = document.createElement('section');
+        section.className = 'period-intro';
+        section.setAttribute('data-year', item.year);
+        section.setAttribute('data-type', item.type);
+
+        const title = document.createElement('h3');
+        title.textContent = item.title;
+        section.appendChild(title);
+
+        const description = document.createElement('p');
+        description.textContent = item.description;
+        section.appendChild(description);
+
+        return section;
+      }
+
+      // Load timeline when page loads
+      document.addEventListener('DOMContentLoaded', loadTimeline);
+    </script>
+
+    <script src="/js/all.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-X3DG2E5E3W"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-X3DG2E5E3W");
+    </script>
+  </body>
+</html>
