@@ -9,7 +9,7 @@
       "knowledge": "GNU 是「GNU is Not Unix」的縮寫。GNU 計畫的目標是開發出與 Unix 系統相容，但不受商業公司限制的作業系統。而牛羚（Gnu，一種非洲羚羊）也成為自由軟體運動的代表動物。",
       "images": [
         {
-          "src": "images/image6.png",
+          "src": "images/image41.png",
           "alt": "GNU 牛羚標誌",
           "credit": "heckert_gnu.big, CC-BY-SA-2.0 @Free Software Foundation, Inc.",
           "link": "https://www.gnu.org/graphics/heckert_gnu.html"
@@ -25,7 +25,7 @@
       "knowledge": "自由軟體（Free Software）中的「Free」常常被誤指為免費，但它的含義是言論自由，而不是免費的啤酒「Free as in speech, not free as in beer」。",
       "images": [
         {
-          "src": "images/image7.png",
+          "src": "images/image51.png",
           "alt": "自由軟體基金會標誌",
           "credit": "logo_fsf.org, CC0 @Free Software Foundation, Inc.",
           "link": "https://www.gnu.org/graphics/fsf-logo.html"
@@ -39,7 +39,14 @@
       "title": "數位魔法寶典：GPL 授權條款的未來法典",
       "description": "GPL 授權條款發布。其被廣泛使用於 GNU 計畫的專案，它將法律文字簡單化，以授權條款保障使用者能自由使用及修改軟體，並規定修改後的作品，以同樣的授權方式傳播下去。",
       "knowledge": "授權條款是自由或開源軟體的必備條件，軟體著作人透過這些條款，釋出部分權利，讓其他人能自由合法地使用和再散布軟體，從而促進快速發展和共享知識的精神。",
-      "images": []
+      "images": [
+        {
+          "src": "images/image21.png",
+          "alt": "GPLv3 標誌",
+          "credit": "GPLv3, 公眾領域。",
+          "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/2880px-GPLv3_Logo.svg.png"
+        }
+      ]
     },
     {
       "year": 1991,
@@ -57,9 +64,9 @@
       "knowledge": "核心的作用是將應用程式所發出的要求，轉譯為中央處理器能執行的指令。Tux 這隻企鵝代表了 Linux，如同 GNU 的牛羚，自由軟體都喜歡用各種動物來作為代表吉祥物。",
       "images": [
         {
-          "src": "images/image9.png",
+          "src": "images/image17.png",
           "alt": "自由軟體百獸齊聚",
-          "credit": "CC BY-ND 3.0 @Free Software Foundation",
+          "credit": "自由軟體百獸齊聚！CC BY-ND 3.0 @Free Software Foundation.",
           "link": "https://static.fsf.org/nosvn/working/w/charac-more.png"
         }
       ]
@@ -81,7 +88,7 @@
       "knowledge": "Newsgroup 和 BBS，可以簡單理解為張貼佈告式的網路論壇，純文字畫面在電腦上呈現。因為開放原始碼的特性，當時學術網路出現多個知名的 BBS，例如臺大的陽光沙灘、以及現在的鄉民聖地批踢踢實業坊，成為網路上討論、交流的一片天地。",
       "images": [
         {
-          "src": "images/image10.png",
+          "src": "images/image30.png",
           "alt": "PTT BBS 介面",
           "credit": "@moboo CC BY-SA 3.0",
           "link": "https://upload.wikimedia.org/wikipedia/commons/7/76/Ptt3.jpg"
@@ -96,7 +103,7 @@
       "description": "Red Hat 公司成立，成功運用 Linux 核心，提供穩定安全的開源軟體解決方案，並以後續的維護諮詢服務作為主要獲利模式，成為近年商業用 Linux 市佔率最高的企業。",
       "images": [
         {
-          "src": "images/image11.png",
+          "src": "images/image40.png",
           "alt": "Red Hat 標誌",
           "credit": "Tux 成為戴上紅帽的商人。CC BY-SA 4.0 @VectorVoyager",
           "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/RedHat_Medal.svg/1200px-RedHat_Medal.svg.png?20220304140459"
@@ -111,7 +118,7 @@
       "description": "FreeBSD 是功能強大的開源作業系統，溯源其發展，最初 BSD 比 Linux 更早被開發，但因受到 UNIX 的商業訴訟糾纏，較晚才被廣泛使用。",
       "images": [
         {
-          "src": "images/image12.png",
+          "src": "images/image26.png",
           "alt": "FreeBSD 小惡魔標誌",
           "credit": "FreeBSD 的代表：紅色小惡魔 Beerware License ＠Poul-Henning Kamp",
           "link": ""
@@ -134,7 +141,7 @@
       "knowledge": "IRC 是一種公開的協定，採用 TCP 和 SSL 協定，可以簡單理解為當時的一種聊天室系統。",
       "images": [
         {
-          "src": "images/image13.png",
+          "src": "images/image22.jpg",
           "alt": "IRC 聊天室介面",
           "credit": "CC BY-SA @Juegos, comando espiar (Dragón) en el Chat IRC Hispano",
           "link": "https://www.flickr.com/photos/chat-irc-hispano/5783754687"
@@ -172,7 +179,7 @@
       "knowledge": "Mozilla Firefox 在 2010 年曾擁有 30% 的瀏覽器使用市場，在眾多對手 Chrome、Safari、Edge 的競爭之下，雖然大幅下滑，但 Mozilla 基金會和社群仍然致力於推動 Firefox 的發展。",
       "images": [
         {
-          "src": "images/image14.png",
+          "src": "images/image4.png",
           "alt": "Netscape Navigator 截圖",
           "credit": "CC0 @Indolering",
           "link": "https://upload.wikimedia.org/wikipedia/commons/6/69/Netscape_Navigator_2_Screenshot.png?20150829214641"
@@ -188,7 +195,7 @@
       "knowledge": "自由軟體與開放原始碼軟體定義上相似，但在哲學上有著不盡相同的思路，各自有各自的支持者，我們常以 FOSS / FLOSS（Free / Libre and Open Source Software）較為中立的敘述，來統稱這兩種軟體。",
       "images": [
         {
-          "src": "images/image15.png",
+          "src": "images/image28.png",
           "alt": "開放源碼促進會標誌",
           "credit": "OSI_Standard_Logo, CC 4.0 @Open Source Initiative",
           "link": "https://opensource.org/osi-logo-files"
@@ -203,9 +210,9 @@
       "description": "無論是學術界的 Linux Fab 臺灣網站，還是商業界的網虎國際公司、資策會…… 等，都投資了許多不同版本的 Linux。同時，RedHat 貢獻者更有傳聞能夠獲得公司總部的股票。在當時 Linux 就像當今 AI 一般地潮！",
       "images": [
         {
-          "src": "images/image16.png",
+          "src": "images/image52.png",
           "alt": "由 Linux 核心所發展出的系統",
-          "credit": "CC BY-SA 3.0 @deviantdark",
+          "credit": "由 Linux 核心所發展出的系統。CC BY-SA 3.0 @deviantdark",
           "link": "https://www.deviantart.com/deviantdark/art/Powered-by-GNU-Linux-82766279"
         }
       ]
@@ -286,7 +293,7 @@
       "knowledge": "CC 授權不適用於軟體，軟體需要使用專門的軟體授權條款敘述，例如前述的 GPL 授權條款。",
       "images": [
         {
-          "src": "images/image17.png",
+          "src": "images/image16.png",
           "alt": "創用 CC 標誌",
           "credit": "cc logo, CC 4.0 @Creative Commons",
           "link": ""
@@ -382,7 +389,7 @@
       "knowledge": "Android 作業系統的核心是開源的，各家開發商可以在 Android 核心上藉由客製化、差異化的方式開發自己的功能與服務，即為三星、索尼... 等品牌的手機，讓消費者有多元的選擇。",
       "images": [
         {
-          "src": "images/image18.png",
+          "src": "images/image45.png",
           "alt": "Android 標誌",
           "credit": "Android logo, 公眾領域",
           "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Android_logo_2023_%28stacked%29.svg/1920px-Android_logo_2023_%28stacked%29.svg.png"
@@ -412,7 +419,7 @@
       "description": "2008 年果子咖啡的成立，友善的包場借用制度，許多社群冒險家，各種出征與聚會的討論都曾在發生過。同時 Hacking Thursday 從這年起，也開始有穩定的聚會。人性空間、乃至於北科伯朗咖啡館，都是重要的聚會空間。",
       "images": [
         {
-          "src": "images/image19.png",
+          "src": "images/image6.png",
           "alt": "果子咖啡聚會照片",
           "credit": "Source: https://www.flickr.com/photos/bobchao/2875190218/in/pool-moztw/",
           "link": "https://www.flickr.com/photos/bobchao/2875190218/in/pool-moztw/"
@@ -427,7 +434,7 @@
       "description": "GitHub 被稱為最大的工程師社交平台，它允許開發者將程式碼庫上傳到雲端，並使用 Git 進行版本控制，其協作功能使貢獻者可以輕鬆進行程式碼變更、討論，形成豐富的開發者生態系統。",
       "images": [
         {
-          "src": "images/image20.png",
+          "src": "images/image10.png",
           "alt": "GitHub 標誌",
           "credit": "CC BY 4.0 @GitHub",
           "link": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Logo_of_Github.jpg?20230410211349"
@@ -442,7 +449,7 @@
       "description": "開放理念的擴展：開放政府 美國前總統歐巴馬簽署《透明與開放政府備忘錄》，鼓勵政府採用開放技術、以開放標準釋出政府資料，揭示「開放政府」作為政府治理的新模型。",
       "images": [
         {
-          "src": "images/image21.png",
+          "src": "images/image8.jpg",
           "alt": "歐巴馬簽署備忘錄",
           "credit": "@Chuck Kennedy, 公眾領域",
           "link": ""
@@ -486,7 +493,15 @@
       "category": "event",
       "title": "時而兇猛，時而萌翻的眾蛇之王",
       "description": "一群喜愛寫 Python 程式語言的軟體工程師，開始每個月一次的 Python 技術交流小聚活動；同年正式開始向國際 PyCon 申請舉行臺灣在地的研討會。",
-      "images": []
+      "images": [
+        {
+          "src": "images/image13.png",
+          "alt": "PyCon Taiwan 年會",
+          "credit": "PyCon Taiwan 年會",
+          "link": "https://drive.google.com/file/d/1VlGOM1H3F0q3rcDupghlFlD7Kva79brM/view?usp=drive_link"
+        }
+
+      ]
     },
     {
       "year": 2012,
@@ -521,9 +536,9 @@
       ],
       "images": [
         {
-          "src": "images/image23.png",
+          "src": "images/image32.png",
           "alt": "經濟動能推升方案廣告截圖",
-          "credit": "",
+          "credit": "引發許多人討論的「經濟動能推升方案」廣告，促使更多公民科技投入者",
           "link": ""
         }
       ]
@@ -547,15 +562,15 @@
       "description": "社群冒險者們如 OpenLab.Taipei 、g0v 參與者等，相約上凱道，聲援 25 萬人送洪仲丘的白衫軍行動，社會議題與開源人，開始於此刻產生交集。",
       "images": [
         {
-          "src": "images/image24.png",
+          "src": "images/image2.png",
           "alt": "Openlab.Taipei 於抗爭現場的 Live Coding 作品「國防部要真相」",
-          "credit": "",
+          "credit": "Openlab.Taipei 於抗爭現場的 Live Coding 作品「國防部要真相」",
           "link": ""
         },
         {
-          "src": "images/image25.png",
+          "src": "images/image42.png",
           "alt": "QRCode",
-          "credit": "",
+          "credit": "https://bit.ly/OT-2013-Hong",
           "link": "https://bit.ly/OT-2013-Hong"
         }
       ]
@@ -585,9 +600,9 @@
       "knowledge": "OCF 一開始成立是因應開源社群無力處理的繁瑣行政工作而生，隨著開放科技在各個領域的擴展，OCF 的關注範圍從開放原始碼、資料、開放政府，逐漸擴展至數位人權與網路自由的層面。",
       "images": [
         {
-          "src": "images/image26.png",
+          "src": "images/image53.png",
           "alt": "第一次募款餐會活動現場照片，由志工所拍攝",
-          "credit": "",
+          "credit": "第一次募款餐會活動現場照片，由志工所拍攝",
           "link": "https://hackmd.io/_uploads/B1BTpbWvR.jpg"
         }
       ]
@@ -622,9 +637,9 @@
       "description": "彙整社群資源是 OCF 的重要目標，希望凝聚四散各地的社群夥伴，集中力量。和社群合辦的 CONCOM，正是在實體串連各地社群，專注在討論跨社群共同事務的活動。",
       "images": [
         {
-          "src": "images/image27.png",
-          "alt": "CONCOM 參與會眾合影，CC BY @othree",
-          "credit": "CC BY @othree",
+          "src": "images/image24.png",
+          "alt": "CONCOM 參與會眾合影",
+          "credit": "CONCOM 參與會眾合影，CC BY @othree",
           "link": "https://hackmd.io/_uploads/H1lfPVZw0.jpg"
         }
       ]
@@ -637,9 +652,9 @@
       "description": "OpenAI 創立，開發爆紅的工具：ChatGPT，卻傳出與創立初衷— 開源和非營利—有所出入。大型語言模型發展快速，LLaMA、ChatGPT2 等的開源不斷引發討論，也得見開源已是軟體發展的要素。",
       "images": [
         {
-          "src": "images/image28.png",
+          "src": "images/image25.png",
           "alt": "未來是人工智慧的世界，開不開源仍然很重要",
-          "credit": "",
+          "credit": "未來是人工智慧的世界，開不開源仍然很重要",
           "link": ""
         }
       ]
@@ -649,13 +664,13 @@
       "type": "taiwan",
       "category": "ocf",
       "isOCF": true,
-      "title": "初代 OCF LOGO",
+      "title": "",
       "description": "初代 OCF LOGO 是由志工 Muka 設計",
       "images": [
         {
-          "src": "images/image29.png",
-          "alt": "初代 OCF LOGO 是由志工 Muka 設計，CC BY @開放文化基金會",
-          "credit": "CC BY @開放文化基金會",
+          "src": "images/image18.png",
+          "alt": "初代 OCF LOGO",
+          "credit": "CC BY @開放文化基金會。",
           "link": ""
         }
       ]
@@ -670,19 +685,19 @@
       "knowledge": "OGP 全稱為開放政府夥伴關係聯盟，臺灣雖然不是正式成員，但積極參與其相關活動，根據其標準於 2020 年通過《開放政府國家行動方案》，包括了 19 項承諾事項，涵蓋資料開放、公共參與及性別和族群包容性等方面。",
       "images": [
         {
-          "src": "images/image30.png",
+          "src": "images/image36.jpg",
           "alt": "OCF 參與開放政府聯盟峰會",
-          "credit": "",
+          "credit": "OCF 參與開放政府聯盟峰會",
           "link": "https://ocf.tw/p/intl/2016/delegation_12.jpg"
         },
         {
-          "src": "images/image31.png",
+          "src": "images/image48.png",
           "alt": "開放政府觀察報告",
-          "credit": "",
+          "credit": "開放政府觀察報告",
           "link": "https://opengovreport.ocf.tw/#tab-0"
         },
         {
-          "src": "images/image32.png",
+          "src": "images/image49.png",
           "alt": "",
           "credit": "",
           "link": ""
@@ -698,9 +713,9 @@
       "description": "OCF 加深與國際盟友合作，辦理亞洲首見的公民科技大型國際會議 Civic Tech Fest，多達 33 個國家參與討論開放科技、數位治理的經驗，並與 WCIT 2017 世界資訊科技大會結合，展現臺灣資訊科技、公民科技能力 OCF 也將臺灣經驗和國際交流。",
       "images": [
         {
-          "src": "images/image33.png",
-          "alt": "Civic Tech Fest 活動合影，CC BY @MySociety",
-          "credit": "CC BY @MySociety",
+          "src": "images/image38.png",
+          "alt": "Civic Tech Fest 活動合影",
+          "credit": "Civic Tech Fest 活動合影，CC BY @MySociety。",
           "link": "https://hackmd.io/_uploads/HJC0bmWv0.jpg"
         }
       ]
@@ -719,7 +734,14 @@
       "isOCF": true,
       "title": "四處尋找盟友，建立星際游擊據點",
       "description": "除了開放資料與政府相關國際活動的參與，OCF 也積極和歐美、東亞的非政府組織串連，參與世界人權大會和 APrIGF 等國際會議，交流開放科技應用於數位人權與網路自由的經驗。",
-      "images": []
+      "images": [
+        {
+          "src": "images/image47.png",
+          "alt": "OCF 參與世界人權大會，交流數位人權與網路自由的經驗。",
+          "credit": "OCF 參與世界人權大會，交流數位人權與網路自由的經驗。",
+          "link": "https://ocf.tw/p/intl/2018/intl-%E6%88%90%E6%9E%9C%E5%A0%B1%E5%91%8Aresize/(%E8%A3%9C)%20%E6%95%B8%E4%BD%8D%E4%BA%BA%E6%AC%8A.JPG"
+        }
+      ]
     },
     {
       "year": 2018,
@@ -744,9 +766,9 @@
       "description": "OCF 發起「開源教教我」工作坊、OCFLab 的專欄網站、開源科技訓練營等多個專案，回歸開源社群的本質，持續共享、開放自身的知識技能，讓他人自由運用，並且說服對方一起讓自由延續。",
       "images": [
         {
-          "src": "images/image35.png",
+          "src": "images/image27.png",
           "alt": "開源教教我，是一系列以開源、分享為出發點的實作活動",
-          "credit": "",
+          "credit": "開源教教我，是一系列以開源、分享為出發點的實作活動",
           "link": "https://hackmd.io/_uploads/SkbQ3_ZwA.png"
         }
       ]
@@ -758,7 +780,16 @@
       "isOCF": true,
       "title": "這些星際副本還未被探索？OCF 組隊出征！",
       "description": "OCF 和眾多民間團體發起開放政府與國會的相關培力工作坊、數位晶片身分證倡議、每月討論網路自由的小聚會等。更促成 CSCS 社群的誕生，傳授更多公民團體面對數位威權所需要的開放科技與資安防禦知識。",
-      "images": []
+      "images": [
+        {
+          "src": "images/image15.png",
+          "alt": "超受歡迎的各種倡議小貼紙。",
+          "credit": "超受歡迎的各種倡議小貼紙。",
+          "link": "https://ocf.tw/p/admin/2020/p7-2.jpg"
+        }
+      ]
+
+
     },
     {
       "year": 2020,
@@ -776,13 +807,13 @@
       "description": "OCF 開始更多培力，注重後繼的培養，希望能為開源社群注入活水。不僅主辦新手入門的年會議程、也開發能夠體驗開源協力模式的「開源星手村」桌遊，引領更多人進入開源的大門而不慌亂。",
       "images": [
         {
-          "src": "images/image37.png",
+          "src": "images/image11.png",
           "alt": "玩到停不下來的開源星手村桌遊",
-          "credit": "",
+          "credit": "玩到停不下來的開源星手村桌遊",
           "link": "https://ocf.tw/p/admin/2021/boardgame.png"
         },
         {
-          "src": "images/image38.png",
+          "src": "images/image23.png",
           "alt": "",
           "credit": "",
           "link": ""
@@ -805,25 +836,25 @@
       "description": "工具中立、但怎麼用全憑人心。隨著科技發展，維護數位人權越來越重要，OCF 發佈企業數位人權排名和數位防禦手冊，並辦理國際會議獎助金，鼓勵民眾積極參與國際事務。",
       "images": [
         {
-          "src": "images/image39.png",
+          "src": "images/image9.png",
           "alt": "企業數位人權排名",
           "credit": "",
           "link": "https://ocf.tw/p/rdr/RDRtw_logo_All.png"
         },
         {
-          "src": "images/image40.png",
+          "src": "images/image46.png",
           "alt": "",
           "credit": "",
           "link": ""
         },
         {
-          "src": "images/image41.png",
+          "src": "images/image20.png",
           "alt": "",
           "credit": "",
           "link": "https://drive.google.com/file/d/1Yj6xmmJWHbleFRzbxVM1XbRzfFNGZg8w/view"
         },
         {
-          "src": "images/image42.png",
+          "src": "images/image29.png",
           "alt": "",
           "credit": "",
           "link": ""
@@ -840,9 +871,9 @@
       "knowledge": "OpenChain ISO/ IEC 5230 與ISO/ IEC 18974 是一個國際的開源合規與資安保證標準。透過 OpenChain，各種規模及行業的公司能簡化及標準化開源管理流程，協助產業一致且有效的規劃使用開源軟體之政策。",
       "images": [
         {
-          "src": "images/image43.png",
+          "src": "images/image50.png",
           "alt": "OCF 和企業合作，協助 KKCompany 完成 OpenChain ISO 第三方國際開源認證",
-          "credit": "",
+          "credit": "OCF 和企業合作，協助 KKCompany 完成 OpenChain ISO 第三方國際開源認證",
           "link": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhl9RULzDJ1JmkrVIeqQBJ5-LIqUcAIpGq5zf56mEeVIWBa1smh2TyyrNzMPy1v8SAajirwRrUc7cvXzCwqV_gVE1uJjxBlYl1n3q9hdBZlAcEL7qHtyWFqWDj2pTx6v77ZdmMwOVMjhw_sc2pPD8V11UUxoI1dMZJwQzKKvZUgk3WVZNwQDoIcVy1rnQ/w468-h352/image2.jpeg"
         }
       ]
@@ -864,31 +895,31 @@
       "knowledge": "「數位壓迫」是一個具體的事實和專有名詞，是指在數位環境中，個體或群體受到控制、監視或限制自由的行為與現象。像是使用數位工具進行監控、資料收集和網路訊息審查……等。",
       "images": [
         {
-          "src": "images/image44.png",
+          "src": "images/image54.jpg",
           "alt": "數位公民研討會廣受關注，吸引眾多民眾參與",
-          "credit": "",
+          "credit": "數位公民研討會廣受關注，吸引眾多民眾參與",
           "link": "https://drive.google.com/drive/folders/1YFlEX5rj1ZNfFn7eLdrZSCREZZBEltOi"
         },
         {
-          "src": "images/image45.png",
+          "src": "images/image39.png",
           "alt": "",
           "credit": "",
           "link": "https://ocf.tw/p/dra/ep/ep.png"
         },
         {
-          "src": "images/image46.png",
+          "src": "images/image31.png",
           "alt": "",
           "credit": "",
           "link": ""
         },
         {
-          "src": "images/image47.png",
+          "src": "images/image1.png",
           "alt": "",
           "credit": "",
           "link": "https://ocf.tw/p/defendhrd/"
         },
         {
-          "src": "images/image48.png",
+          "src": "images/image44.png",
           "alt": "",
           "credit": "",
           "link": ""
@@ -904,15 +935,15 @@
       "description": "讓開源跨出同溫層一直是 OCF 想做的事，透過這次的夏日派對，我們嘗試把網路隱私和安全的重要性，透過對談、音像演出的方式帶給同溫層以外的人們，感受音樂和藝術的薰陶之外，也能理解議題的重要。",
       "images": [
         {
-          "src": "images/image49.png",
+          "src": "images/image3.png",
           "alt": "",
           "credit": "",
           "link": ""
         },
         {
-          "src": "images/image50.png",
+          "src": "images/image33.png",
           "alt": "2023 夏日派對是 OCF 嘗試開源跨界的一大步",
-          "credit": "CC BY yupojen",
+          "credit": "2023 夏日派對是 OCF 嘗試開源跨界的一大步。CC BY yupojen",
           "link": "https://drive.google.com/file/d/1oEVQbgxnk5r2pvq8GFZEIm-Ek_HjBbko/view?usp=sharing"
         }
       ]
@@ -925,21 +956,21 @@
       "description": "2023 年起，臺北市政府開始舉辦「程式設計節」號召開源，並將「臺北城市儀表板」和「臺北通 2.0」開源；也積極與各地社群合作，致力於開放更多有用的資料，並透過與公民社群的協作，開發出更多有助於智慧城市應用與服務的工具。",
       "images": [
         {
-          "src": "images/image51.png",
+          "src": "images/image34.jpg",
           "alt": "社群冒險者對趙局長展示其城市儀表板成果",
-          "credit": "CC By-SA SITCON",
+          "credit": "社群冒險者對趙局長展示其城市儀表板成果。CC By-SA SITCON",
           "link": "https://www.flickr.com/photos/sitcon/53899235039/in/album-72177720319301413/"
         },
         {
-          "src": "images/image52.png",
+          "src": "images/image5.jpg",
           "alt": "社群冒險者展示其城市儀表板開發成果",
-          "credit": "CC By-SA SITCON",
+          "credit": "社群冒險者展示其城市儀表板開發成果。CC By-SA SITCON",
           "link": "https://www.flickr.com/photos/sitcon/53899319265/in/album-72177720319301413/"
         },
         {
-          "src": "images/image53.png",
+          "src": "images/image19.png",
           "alt": "臺北程式設計節 QRCode",
-          "credit": "",
+          "credit": "瞭解更多「臺北程式設計節」",
           "link": ""
         }
       ]
@@ -962,9 +993,9 @@
       "description": "經過十年的星際奮戰，當初召喚補師，果然是明智之舉！開源冒險家與 OCF 的默契合作，讓我們在宇宙的旅程中無縫協作。你在開源探索中遇到困難，缺乏補師或其他專業角色嗎？ 加入 OCF，與我們一起透過各種方式參與社群，共同征服未知的星域吧！",
       "images": [
         {
-          "src": "images/image54.jpg",
+          "src": "images/image7.png",
           "alt": "和社群一起努力十年了，OCF 用嶄新的 LOGO 表達開放、多元與涵融的組織形象",
-          "credit": "",
+          "credit": "和社群一起努力十年了，OCF 用嶄新的 LOGO 表達開放、多元與涵融的組織形象",
           "link": "https://ocf.tw/mediakit/logo.png"
         }
       ]
