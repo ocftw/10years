@@ -50,6 +50,37 @@
           background: white;
         }
       }
+
+      .columns .column img {
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+      }
+
+      .columns .column {
+        position: relative;
+      }
+
+      .banner-shadow-wrapper {
+        position: relative;
+        display: inline-block;
+      }
+
+      .banner-shadow-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 79%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 6px;
+        background-color: rgba(0, 0, 0, 0.35);
+        border-radius: 100%;
+        filter: blur(4px);
+        z-index: 1;
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -82,8 +113,8 @@
             </p>
           </div>
           <div class="column" style="text-align: center">
-            <a href="./exhibition/"
-              ><img width="100%" src="./img/banner_235x100_1200.webp"
+            <a href="./exhibition/" class="banner-shadow-wrapper"
+              ><img width="100%" src="./exhibition/banner-web/banner2.jpg"
             /></a>
             <p>
               <a href="./exhibition/"
@@ -98,7 +129,7 @@
             /></a>
             <p>
               <a href="./archive_index.html"
-                >開源祭：十週年特別活動<br />（封存網站）</a
+                >開源祭：十週年特別活動<br />活動網站</a
               >
             </p>
           </div>
