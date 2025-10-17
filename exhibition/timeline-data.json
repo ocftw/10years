@@ -538,8 +538,9 @@
         {
           "src": "images/image32.png",
           "alt": "經濟動能推升方案廣告截圖",
-          "credit": "引發許多人討論的「經濟動能推升方案」廣告，促使更多公民科技投入者",
-          "link": ""
+          "credit": "bit.ly/EXE-YUAN-VIDEO 引發許多人討論的「經濟動能推升方案」廣告，促使更多公民科技投入者",
+          "link": "https://bit.ly/EXE-YUAN-VIDEO",
+          "isQRCode": true
         }
       ]
     },
@@ -560,6 +561,9 @@
       "category": "event",
       "title": "開源戰士帶著 CODE 上街，響應未來議題行動！",
       "description": "社群冒險者們如 OpenLab.Taipei 、g0v 參與者等，相約上凱道，聲援 25 萬人送洪仲丘的白衫軍行動，社會議題與開源人，開始於此刻產生交集。",
+      "links": [
+        "https://bit.ly/OT-2013-Hong"
+      ],
       "images": [
         {
           "src": "images/image2.png",
@@ -571,7 +575,8 @@
           "src": "images/image42.png",
           "alt": "QRCode",
           "credit": "https://bit.ly/OT-2013-Hong",
-          "link": "https://bit.ly/OT-2013-Hong"
+          "link": "https://bit.ly/OT-2013-Hong",
+          "isQRCode": true
         }
       ]
     },
@@ -693,14 +698,15 @@
         {
           "src": "images/image48.png",
           "alt": "開放政府觀察報告",
-          "credit": "開放政府觀察報告",
-          "link": "https://opengovreport.ocf.tw/#tab-0"
+          "credit": "開放政府觀察報告 opengovreport.ocf.tw",
+          "link": "https://opengovreport.ocf.tw/"
         },
         {
           "src": "images/image49.png",
           "alt": "",
           "credit": "",
-          "link": ""
+          "link": "https://opengovreport.ocf.tw/#tab-0",
+          "isQRCode": true
         }
       ]
     },
@@ -810,13 +816,14 @@
           "src": "images/image11.png",
           "alt": "玩到停不下來的開源星手村桌遊",
           "credit": "玩到停不下來的開源星手村桌遊",
-          "link": "https://ocf.tw/p/admin/2021/boardgame.png"
+          "link": "https://openstartervillage.ocf.tw"
         },
         {
           "src": "images/image23.png",
           "alt": "",
-          "credit": "",
-          "link": ""
+          "credit": "openstartervillage.ocf.tw",
+          "link": "https://openstartervillage.ocf.tw/",
+          "isQRCode": true
         }
       ]
     },
@@ -837,27 +844,29 @@
       "images": [
         {
           "src": "images/image9.png",
-          "alt": "企業數位人權排名",
-          "credit": "",
-          "link": "https://ocf.tw/p/rdr/RDRtw_logo_All.png"
+          "alt": "台灣企業數位人權",
+          "credit": "台灣企業數位人權 ocf.tw/p/rdr/2022/",
+          "link": "https://ocf.tw/p/rdr/2022/"
         },
         {
           "src": "images/image46.png",
           "alt": "",
           "credit": "",
-          "link": ""
+          "link": "https://ocf.tw/p/rdr/2022/",
+          "isQRCode": true
         },
         {
           "src": "images/image20.png",
-          "alt": "",
-          "credit": "",
+          "alt": "數位防禦手冊",
+          "credit": "數位防禦手冊 digitalsecurityhandbook.ocf.tw",
           "link": "https://drive.google.com/file/d/1Yj6xmmJWHbleFRzbxVM1XbRzfFNGZg8w/view"
         },
         {
           "src": "images/image29.png",
           "alt": "",
           "credit": "",
-          "link": ""
+          "link": "https://digitalsecurityhandbook.ocf.tw/",
+          "isQRCode": true
         }
       ]
     },
@@ -902,27 +911,29 @@
         },
         {
           "src": "images/image39.png",
-          "alt": "",
-          "credit": "",
-          "link": "https://ocf.tw/p/dra/ep/ep.png"
+          "alt": "強化隱私：東亞數位人權及所處環境之下，公民社會的行動策略",
+          "credit": "https://ocf.tw/p/dra/ep/",
+          "link": "https://ocf.tw/p/dra/ep/"
         },
         {
           "src": "images/image31.png",
           "alt": "",
           "credit": "",
-          "link": ""
+          "link": "",
+          "isQRCode": true
         },
         {
           "src": "images/image1.png",
-          "alt": "",
-          "credit": "",
+          "alt": "在台人權與民主倡議工作者的數位安全樣態與培力",
+          "credit": "https://ocf.tw/p/defendhrd/",
           "link": "https://ocf.tw/p/defendhrd/"
         },
         {
           "src": "images/image44.png",
           "alt": "",
           "credit": "",
-          "link": ""
+          "link": "",
+          "isQRCode": true
         }
       ]
     },
@@ -936,9 +947,9 @@
       "images": [
         {
           "src": "images/image3.png",
-          "alt": "",
+          "alt": "Luca Bonaccorsi",
           "credit": "",
-          "link": ""
+          "link": "https://www.facebook.com/photo/?fbid=573605211636247&set=pb.100069603181875.-2207520000"
         },
         {
           "src": "images/image33.png",
@@ -970,8 +981,9 @@
         {
           "src": "images/image19.png",
           "alt": "臺北程式設計節 QRCode",
-          "credit": "瞭解更多「臺北程式設計節」",
-          "link": ""
+          "credit": "臺北程式設計節 https://codefest.taipei/",
+          "link": "https://codefest.taipei/",
+          "isQRCode": true
         }
       ]
     },
