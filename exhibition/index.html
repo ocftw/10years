@@ -25,11 +25,11 @@
     />
     <meta
       property="og:image"
-      content="https://10years.ocf.tw/img/10years_banner.webp"
+      content="https://10years.ocf.tw/exhibition/banner/banner2.jpg"
     />
     <meta
       name="twitter:image"
-      content="https://10years.ocf.tw/img/10years_banner.webp"
+      content="https://10years.ocf.tw/exhibition/banner/banner2.jpg"
     />
     <meta property="twitter:card" content="summary_large_image" />
     <meta
@@ -45,9 +45,82 @@
     <link rel="stylesheet" href="/fa/css/all.min.css" />
     <link rel="stylesheet" href="/css/all.css" />
     <style>
-      @media (prefers-color-scheme: dark) {
-        body {
-          background: white;
+      /* CSS 變數系統 */
+      :root {
+        /* 淺色模式變數 */
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8f9fa;
+        --text-primary: #333333;
+        --text-secondary: #666666;
+        --accent-color: #6450DC;
+        --accent-secondary: #00A896;
+        --border-color: #e0e0e0;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --card-bg: #ffffff;
+        --timeline-bg: #f8f9fa;
+      }
+
+      /* 深色模式變數 */
+      body[data-theme="dark"] {
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #1a1a1a;
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --accent-color: #8b7dd8;
+        --accent-secondary: #00d4aa;
+        --border-color: #404040;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+        --card-bg: #2d2d2d;
+        --timeline-bg: #1a1620;
+      }
+
+      /* 基本 body 樣式 */
+      body {
+        font-family: 'Noto Sans TC', sans-serif;
+        line-height: 1.6;
+        color: var(--text-primary);
+        background: var(--bg-secondary);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 主題切換按鈕 */
+      .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: var(--card-bg);
+        border: 2px solid var(--accent-color);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px var(--shadow-color);
+      }
+
+      .theme-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px var(--shadow-color);
+      }
+
+      .theme-toggle i {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      /* 響應式設計 - 手機版主題按鈕調整 */
+      @media (max-width: 768px) {
+        .theme-toggle {
+          bottom: 20px;
+          right: 20px;
+          top: auto;
         }
       }
 
@@ -69,7 +142,7 @@
         width: 2px;
         background: #6450DC;
         transform: translateX(-50%);
-        z-index: 1;
+        z-index: 0;
       }
 
       .timeline-year-marker {
@@ -81,14 +154,15 @@
 
       .timeline-year-marker h2 {
         font-size: 2rem;
-        color: #6450DC;
-        background: white;
+        color: var(--accent-color);
+        background: var(--card-bg);
         padding: 0 2rem;
         display: inline-block;
         border-radius: 2rem;
         box-shadow: 0 2px 10px rgba(100, 80, 220, 0.2);
         /* font-weight: bold; */
         margin: 0;
+        transition: all 0.3s ease;
       }
 
       .year-milestone-info {
@@ -190,24 +264,33 @@
         z-index: 2;
         margin-left: auto;
         margin-right: auto;
+        transition: all 0.3s ease;
+      }
+
+      /* 深色模式下的時期說明區塊 */
+      body[data-theme="dark"] .period-intro {
+        background: linear-gradient(135deg, #2a2a3a 0%, #1a1a2a 100%);
+        border-color: #8b7dd8;
       }
 
       .period-intro h3 {
         font-size: 1.5rem;
-        color: #6450DC;
+        color: var(--accent-color);
         margin-bottom: 1rem;
         font-weight: bold;
+        transition: color 0.3s ease;
       }
 
       .period-intro p {
         font-size: 1.1rem;
         line-height: 1.8;
-        color: #333;
+        color: var(--text-primary);
         margin-bottom: 1rem;
         text-align: justify;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        transition: color 0.3s ease;
       }
 
       .period-intro p:last-child {
@@ -215,12 +298,13 @@
       }
 
       .timeline-content {
-        background: white;
+        background: var(--card-bg);
         padding: 1.5rem;
         border-radius: 0.5rem;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 10px var(--shadow-color);
         border: 4px solid #6450DC;
         border-width: 0 4px 0 4px;
+        transition: all 0.3s ease;
       }
 
       .timeline-left .timeline-content {
@@ -266,7 +350,7 @@
         display: none;
         /* font-size: 1.5rem;
         font-weight: bold;
-        color: #6450DC;
+        color: var(--accent-color);
         margin-bottom: 0.5rem; */
       }
 
@@ -274,21 +358,30 @@
         font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
-        color: #333;
+        color: var(--text-primary);
       }
 
       .timeline-description {
-        color: #666;
+        color: var(--text-secondary);
         line-height: 1.6;
         margin-bottom: 1rem;
       }
 
       .timeline-knowledge {
-        background: #fff9e6;
-        border-left: 3px solid #ffc107;
+        background: var(--timeline-bg);
+        border-left: 3px solid var(--accent-color);
         padding: 1rem;
         margin: 1rem 0;
         font-size: 0.9rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        color: var(--text-primary);
+      }
+
+      .timeline-knowledge strong {
+        color: var(--accent-color);
+        font-weight: bold;
+        transition: color 0.3s ease;
       }
 
       .timeline-image {
@@ -317,6 +410,11 @@
         box-shadow: none;
       }
 
+      /* QR code 在深色模式下的白色邊框 */
+      body[data-theme="dark"] .timeline-image.qr-code {
+        border: 5px solid white;
+      }
+
       figure a {
         display: block;
         cursor: pointer;
@@ -332,7 +430,7 @@
       }
 
       .timeline-links a {
-        color: #6450DC;
+        color: var(--accent-color);
         text-decoration: none;
         margin-right: 1rem;
       }
@@ -343,10 +441,6 @@
 
 
       @media (max-width: 768px) {
-        .timeline-dual::before {
-          left: 1rem;
-        }
-
         .timeline-row {
           grid-template-columns: 1fr;
         }
@@ -362,12 +456,11 @@
         }
 
         .timeline-item::before {
-          left: 0.5rem !important;
-          right: auto !important;
+          display: none;
         }
 
         .timeline-content {
-          border-left: 4px solid #6450DC !important;
+          border-left: 4px solid var(--accent-color) !important;
           border-right: none !important;
         }
 
@@ -390,18 +483,7 @@
 
 
       .back-button {
-        position: fixed;
-        top: 2rem;
-        left: 2rem;
-        background: #6450DC;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        text-decoration: none;
-        font-weight: bold;
-        box-shadow: 0 2px 10px rgba(100, 80, 220, 0.3);
-        transition: all 0.3s ease;
-        z-index: 1000;
+        display: none;
       }
 
       .back-button:hover {
@@ -412,14 +494,14 @@
       }
 
       .reference-section {
-        background: #f8f9fa;
+        background: var(--timeline-bg);
         padding: 3rem 0;
         margin-top: 3rem;
       }
 
       .reference-title {
         font-size: 1.5rem;
-        color: #6450DC;
+        color: var(--accent-color);
         margin-bottom: 2rem;
         text-align: center;
       }
@@ -435,7 +517,7 @@
       }
 
       .reference-list a {
-        color: #6450DC;
+        color: var(--accent-color);
         text-decoration: none;
       }
 
@@ -448,12 +530,12 @@
         max-width: 1000px;
         margin: 0 auto;
         padding: 3rem 2rem;
-        background: white;
+        background: var(--card-bg);
       }
 
       .exhibition-main-title {
         font-size: 2.5rem;
-        color: #6450DC;
+        color: var(--accent-color);
         text-align: center;
         margin-bottom: 1rem;
         font-weight: bold;
@@ -469,28 +551,51 @@
 
       .exhibition-quote {
         font-size: 1.2rem;
-        color: #666;
+        color: var(--text-secondary);
         text-align: center;
         font-style: italic;
         margin-bottom: 2rem;
+        transition: color 0.3s ease;
       }
 
       .exhibition-text {
         font-size: 1.1rem;
         line-height: 1.8;
-        color: #333;
+        color: var(--text-primary);
         margin-bottom: 1.5rem;
         text-align: justify;
       }
 
-      .knowledge-box {
-        background: #fff9e6;
-        border-left: 4px solid #ffc107;
-        padding: 1.5rem;
+      .knowledge-boxes-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
         margin: 2rem 0;
+      }
+
+      .knowledge-box {
+        background: var(--timeline-bg);
+        border-left: 4px solid var(--accent-color);
+        padding: 1.5rem;
+        margin: 0;
         border-radius: 0.5rem;
         font-size: 1rem;
         line-height: 1.6;
+        transition: all 0.3s ease;
+        color: var(--text-primary);
+      }
+
+      /* 響應式設計 - 手機版改為單欄 */
+      @media (max-width: 768px) {
+        .knowledge-boxes-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .knowledge-box strong {
+        color: var(--accent-color);
+        font-weight: bold;
+        transition: color 0.3s ease;
       }
 
       /* 策展論述中的 Banner 樣式 */
@@ -500,29 +605,31 @@
       }
 
       .exhibition-banner .image-item {
-        max-width: 600px;
+        /* max-width: 600px; */
         margin: 0 auto;
       }
 
       /* 策展人樣式 */
       .curator-section {
-        background: #f8f9fa;
+        background: var(--timeline-bg);
         padding: 3rem 0;
       }
 
       .curator-title {
-        font-size: 2rem;
-        color: #6450DC;
+        font-size: 1.5rem;
+        color: var(--accent-color);
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        transition: color 0.3s ease;
       }
 
       .timeline-section-title {
         font-size: 2rem;
-        color: #6450DC;
+        color: var(--accent-color);
         text-align: center;
         margin-top: 4rem;
         margin-bottom: 3rem;
+        transition: color 0.3s ease;
       }
 
       .curator-content {
@@ -548,14 +655,21 @@
         transform: scale(1.02);
       }
 
+      .curator-banner .image-item {
+        /* max-width: 600px; */
+        margin: 0 auto;
+      }
+
       .curator-info {
         text-align: center;
       }
 
       .ocf-title {
         font-size: 1.8rem;
-        color: #6450DC;
+        color: var(--accent-color);
         margin-bottom: 1rem;
+        text-align: center;
+        transition: color 0.3s ease;
       }
 
       .ocf-symbol {
@@ -567,7 +681,7 @@
       .ocf-description {
         font-size: 1.1rem;
         line-height: 1.8;
-        color: #333;
+        color: var(--text-primary);
         margin-bottom: 1.5rem;
         text-align: justify;
         max-width: 800px;
@@ -578,8 +692,9 @@
 
       .image-caption {
         font-size: 0.9rem;
-        color: #666;
+        color: var(--text-secondary);
         margin-top: 0.5rem;
+        transition: color 0.3s ease;
       }
 
       .ocf-additional-img {
@@ -594,6 +709,12 @@
         background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
         padding: 4rem 0;
         margin-top: 3rem;
+        transition: all 0.3s ease;
+      }
+
+      /* 深色模式下的結語區塊 */
+      body[data-theme="dark"] .conclusion-section {
+        background: linear-gradient(135deg, #2a2a3a 0%, #1a1a2a 100%);
       }
 
       .conclusion-content {
@@ -605,9 +726,33 @@
       .conclusion-text {
         font-size: 1.2rem;
         line-height: 1.8;
-        color: #333;
+        color: var(--text-primary);
         margin-bottom: 2rem;
         text-align: justify;
+        transition: color 0.3s ease;
+      }
+
+      /* Footer 樣式 */
+      .footer {
+        background: var(--timeline-bg) !important;
+        padding: 2rem 0 !important;
+        margin-top: 3rem !important;
+        transition: background-color 0.3s ease !important;
+      }
+
+      .footer .content {
+        color: var(--text-primary) !important;
+        transition: color 0.3s ease !important;
+      }
+
+      .footer .logo {
+        max-height: 60px !important;
+        transition: filter 0.3s ease !important;
+      }
+
+      /* 深色模式下的 logo 調整 */
+      body[data-theme="dark"] .footer .logo {
+        filter: brightness(0) invert(1) !important;
       }
 
       /* 主視覺 Banner 樣式 */
@@ -627,14 +772,14 @@
 
       /* Banner 展示區塊樣式 */
       .banner-gallery-section {
-        background: #f8f9fa;
+        background: var(--timeline-bg);
         padding: 3rem 0;
         margin-top: 3rem;
       }
 
       .section-title {
         font-size: 2rem;
-        color: #6450DC;
+        color: var(--accent-color);
         text-align: center;
         margin-bottom: 2rem;
       }
@@ -660,8 +805,8 @@
         justify-items: center;
       }
 
-      /* 當圖片數量為奇數時，最後一張圖片置中 */
-      .image-item:nth-child(odd):last-child {
+      /* 當圖片數量為奇數時，最後一張圖片置中 - 僅限於 banner-gallery-section */
+      .banner-gallery-section .image-item:nth-child(odd):last-child {
         grid-column: 1 / -1;
         justify-self: center;
         max-width: 50%;
@@ -729,6 +874,11 @@
       <i class="fas fa-arrow-left"></i> 返回首頁
     </a>
 
+    <!-- 深色模式切換按鈕 -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="切換深色模式">
+      <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
     <!-- 主視覺 Banner -->
     <section class="hero-banner">
       <img src="banner-web/banner2.jpg" alt="科技征途：無硝煙的自由戰 - 開源運動在臺灣｜OCF 十週年特展 - 打破科技與軟體封建，一場令人熱血沸騰的開放世界冒險" class="hero-image">
@@ -738,8 +888,7 @@
     <section class="exhibition-intro">
       <div class="container">
         <!-- SEO 標題（視覺上隱藏但保留在 DOM 中） -->
-        <h2 class="exhibition-main-title" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">科技征途：無硝煙的自由戰</h2>
-        <h3 class="exhibition-sub-title" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">開源運動在臺灣｜OCF 十週年特展</h3>
+        <h1 class="exhibition-main-title" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">科技征途：無硝煙的自由戰⸺開源運動在臺灣，OCF 十週年特展</h1>
         <p class="exhibition-quote" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">⸺打破科技與軟體封建，一場令人熱血沸騰的開放世界冒險⸺</p>
 
         <p class="exhibition-text">
@@ -768,22 +917,24 @@
         </p>
 
         <!-- 小知識框 -->
-        <div class="knowledge-box">
-          <strong>本展所提及之「開源軟體」</strong>，為「自由與開放原始碼軟體」之統稱，泛指採用經自由軟體基金會或開放源碼促進會所認可的授權條款釋出，以供大眾自由利用的軟體或科技。
-        </div>
+        <div class="knowledge-boxes-container">
+          <div class="knowledge-box">
+            本展所提及之「<strong>自由與開源軟體</strong>」、「<strong>開源軟體</strong>」，為「自由與開放原始碼軟體」之統稱，泛指採用經自由軟體基金會或開放源碼促進會所認可的授權條款釋出，以供大眾自由利用的軟體或科技。
+          </div>
 
-        <div class="knowledge-box">
-          <strong>社群</strong>是一群有共同興趣和志向，聚在一起實體或網路上討論的人們。社群的討論主題多元且具遊牧的特性，常見的方式是透過網路討論議題、咖啡店內小聚會，大活動（CON）則是社群的大型見面會。
-        </div>
+          <div class="knowledge-box">
+            <strong>社群</strong>是一群有共同興趣和志向，聚在一起實體或網路上討論的人們。社群的討論主題多元且具遊牧的特性，常見的方式是透過網路討論議題、咖啡店內小聚會，大活動（CON）則是社群的大型見面會。
+          </div>
 
-        <div class="knowledge-box">
-          <strong>無論是公民科技或是開源社群</strong>，重要記憶眾多且本展篇幅有限，無法涵蓋所有事件，在此特別說明。歡迎在現場的你，發揮開源與自由貢獻精神，透過我們的互動方式，貢獻你知道的社群和記憶哦！
+          <div class="knowledge-box">
+            無論是<strong>公民科技</strong>或是<strong>開源社群</strong>，重要記憶眾多且本展篇幅有限，無法涵蓋所有事件，在此特別說明。歡迎在現場的你，發揮開源與自由貢獻精神，透過我們的互動方式，貢獻你知道的社群和記憶哦！
+          </div>
         </div>
 
         <!-- Banner3 展示 -->
         <div class="exhibition-banner">
             <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513704680/in/album-72177720326046662/lightbox/">
-            <img src="banner-web/banner3.jpg" alt="Banner 3" class="preview-image">
+            <img src="banner-web/banner3.jpg" alt="" class="preview-image">
             <div class="image-overlay">
               <span class="view-fullsize">查看大圖</span>
             </div>
@@ -796,13 +947,13 @@
     <section class="curator-section">
       <div class="container">
         <h2 class="curator-title">策展人</h2>
-        <h3 class="ocf-title">開放文化基金會 (Open Culture Foundation, OCF)</h3>
+        <p class="ocf-title">開放文化基金會 (Open Culture Foundation, OCF)</p>
 
         <div class="curator-content">
           <!-- OCF Banner -->
           <div class="curator-banner">
             <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513610768/in/album-72177720326046662/lightbox/">
-              <img src="banner-web/banner4.jpg" alt="OCF 策展人 Banner" class="curator-image">
+              <img src="banner-web/banner4.jpg" alt="" class="curator-image">
               <div class="image-overlay">
                 <span class="view-fullsize">查看大圖</span>
               </div>
@@ -861,13 +1012,13 @@
               <h3>開源繁星錄，在地的星辰與基石</h3>
               <div class="image-grid">
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54518348861/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/community1.jpg" alt="Community 1" class="preview-image">
+                  <img src="banner-web/community1.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
                 </div>
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54518611053/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/community2.jpg" alt="Community 2" class="preview-image">
+                  <img src="banner-web/community2.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
@@ -880,45 +1031,45 @@
               <h3>社群回憶錄：開源運動在臺灣</h3>
               <div class="image-grid">
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513609888/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/global1-rtl.jpg" alt="Global 1" class="preview-image">
+                  <img src="banner-web/global1-rtl.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
                 </div>
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513703695/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/global2-rtl.jpg" alt="Global 2" class="preview-image">
+                  <img src="banner-web/global2-rtl.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
                 </div>
 
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513532619/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/ocf1-rtl.jpg" alt="OCF 1" class="preview-image">
+                  <img src="banner-web/ocf1-rtl.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
                 </div>
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513349711/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/ocf2-rtl.jpg" alt="OCF 2" class="preview-image">
+                  <img src="banner-web/ocf2-rtl.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
                 </div>
 
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513611083/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/taiwan1-rtl.jpg" alt="Taiwan 1" class="preview-image">
+                  <img src="banner-web/taiwan1-rtl.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
                 </div>
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54512485602/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/taiwan2-rtl.jpg" alt="Taiwan 2" class="preview-image">
+                  <img src="banner-web/taiwan2-rtl.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
                 </div>
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513350306/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/taiwan3-rtl.jpg" alt="Taiwan 3" class="preview-image">
+                  <img src="banner-web/taiwan3-rtl.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
@@ -930,13 +1081,13 @@
               <h3>開源繁星錄，來自星際間的聯盟祝福</h3>
               <div class="image-grid">
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54518348841/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/intl1.jpg" alt="International 1" class="preview-image">
+                  <img src="banner-web/intl1.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
                 </div>
                 <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54518699210/in/album-72177720326046662/lightbox/">
-                  <img src="banner-web/intl2.jpg" alt="International 2" class="preview-image">
+                  <img src="banner-web/intl2.jpg" alt="" class="preview-image">
                   <div class="image-overlay">
                     <span class="view-fullsize">查看大圖</span>
                   </div>
@@ -948,7 +1099,7 @@
 
         <section class="reference-section">
           <div class="container">
-            <h3 class="reference-title">參考資料</h3>
+            <h2 class="reference-title">參考資料</h2>
             <ul class="reference-list">
               <li>Abel Samot. 2023/10/11. The evolution of the Open Source market & how Fair Code is taking over. Retrieved from: <a href="https://medium.com/red-river-west/the-evolution-of-the-open-source-market-how-fair-code-is-taking-over-6c406570c63f" target="_blank">https://medium.com/red-river-west/the-evolution-of-the-open-source-market-how-fair-code-is-taking-over-6c406570c63f</a></li>
               <li>Codemotion. 2023/2/24. Infographic: The History of Open Source. Retrieved from: <a href="https://www.codemotion.com/magazine/infographics/the-history-of-open-source/" target="_blank">https://www.codemotion.com/magazine/infographics/the-history-of-open-source/</a></li>
@@ -1292,7 +1443,47 @@
       document.addEventListener('DOMContentLoaded', () => {
         loadTimeline();
         initLightbox();
+        initThemeToggle();
       });
+
+      // 主題切換功能
+      function initThemeToggle() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // 檢查本地儲存的主題設定，如果沒有則預設為深色模式
+        const savedTheme = localStorage.getItem('theme');
+
+        // 設定初始主題：預設深色模式，除非用戶之前選擇了淺色模式
+        if (savedTheme === 'light') {
+          body.setAttribute('data-theme', 'light');
+          themeIcon.className = 'fas fa-moon';
+        } else {
+          // 預設深色模式
+          body.setAttribute('data-theme', 'dark');
+          themeIcon.className = 'fas fa-sun';
+          // 如果沒有儲存的設定，設定為深色模式
+          if (!savedTheme) {
+            localStorage.setItem('theme', 'dark');
+          }
+        }
+
+        // 切換主題
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = body.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+          body.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+
+          if (newTheme === 'dark') {
+            themeIcon.className = 'fas fa-sun';
+          } else {
+            themeIcon.className = 'fas fa-moon';
+          }
+        });
+      }
     </script>
 
     <script src="/js/all.js"></script>
