@@ -54,9 +54,10 @@
       /* 雙欄時間軸樣式 */
       .timeline-dual {
         position: relative;
-        padding: 2rem 0;
+        padding: 0 0 2rem;
         max-width: 1400px;
         margin: 0 auto;
+        line-break: normal;
       }
 
       .timeline-dual::before {
@@ -79,14 +80,14 @@
       }
 
       .timeline-year-marker h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: #6450DC;
         background: white;
         padding: 0 2rem;
         display: inline-block;
         border-radius: 2rem;
         box-shadow: 0 2px 10px rgba(100, 80, 220, 0.2);
-        font-weight: bold;
+        /* font-weight: bold; */
         margin: 0;
       }
 
@@ -100,6 +101,10 @@
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .year-milestone-info h3 {
+        display: none;
       }
 
       .milestone-grid {
@@ -400,7 +405,7 @@
       }
 
       .reference-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         color: #6450DC;
         margin-bottom: 2rem;
         text-align: center;
@@ -475,6 +480,17 @@
         line-height: 1.6;
       }
 
+      /* 策展論述中的 Banner 樣式 */
+      .exhibition-banner {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .exhibition-banner .image-item {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
       /* 策展人樣式 */
       .curator-section {
         background: #f8f9fa;
@@ -488,32 +504,35 @@
         margin-bottom: 2rem;
       }
 
+      .timeline-section-title {
+        font-size: 2rem;
+        color: #6450DC;
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+      }
+
       .curator-content {
         max-width: 1000px;
         margin: 0 auto;
         padding: 0 2rem;
       }
 
-      .curator-logo {
+      .curator-banner {
         text-align: center;
         margin-bottom: 2rem;
       }
 
-      .ocf-logo {
-        max-width: 200px;
+      .curator-image {
+        width: 100%;
         height: auto;
-        margin-bottom: 1rem;
-        transition: all 0.3s ease;
+        display: block;
+        border-radius: 0.5rem;
+        transition: transform 0.3s ease;
       }
 
-      .ocf-logo:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      }
-
-      .logo-caption {
-        font-size: 0.9rem;
-        color: #666;
+      .curator-banner .image-item:hover .curator-image {
+        transform: scale(1.02);
       }
 
       .curator-info {
@@ -543,37 +562,6 @@
         margin-right: auto;
       }
 
-      .core-areas-title {
-        font-size: 1.5rem;
-        color: #00A896;
-        margin: 2rem 0 1rem 0;
-      }
-
-      .core-areas-intro {
-        font-size: 1rem;
-        color: #666;
-        margin-bottom: 1.5rem;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .core-areas-image {
-        margin: 2rem 0;
-      }
-
-      .core-areas-img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-      }
-
-      .core-areas-img:hover {
-        transform: scale(1.02);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      }
 
       .image-caption {
         font-size: 0.9rem;
@@ -608,6 +596,119 @@
         margin-bottom: 2rem;
         text-align: justify;
       }
+
+      /* 主視覺 Banner 樣式 */
+      .hero-banner {
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+
+      /* Banner 展示區塊樣式 */
+      .banner-gallery-section {
+        background: #f8f9fa;
+        padding: 3rem 0;
+        margin-top: 3rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        color: #6450DC;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .banner-category {
+        margin-bottom: 3rem;
+      }
+
+      .banner-category h3 {
+        font-size: 1.5rem;
+        color: #00A896;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        direction: rtl; /* 從右到左排列 */
+        justify-items: center;
+      }
+
+      /* 當圖片數量為奇數時，最後一張圖片置中 */
+      .image-item:nth-child(odd):last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 50%;
+      }
+
+      .image-item {
+        position: relative;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        direction: ltr; /* 圖片內容恢復正常方向 */
+      }
+
+      .image-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      }
+
+      .preview-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(100, 80, 220, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .image-item:hover .image-overlay {
+        opacity: 1;
+      }
+
+      .view-fullsize {
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      /* 響應式設計 */
+      @media (max-width: 768px) {
+        .image-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .banner-category h3 {
+          font-size: 1.3rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -615,12 +716,18 @@
       <i class="fas fa-arrow-left"></i> 返回首頁
     </a>
 
+    <!-- 主視覺 Banner -->
+    <section class="hero-banner">
+      <img src="banner-web/banner2.jpg" alt="科技征途：無硝煙的自由戰 - 開源運動在臺灣｜OCF 十週年特展 - 打破科技與軟體封建，一場令人熱血沸騰的開放世界冒險" class="hero-image">
+    </section>
+
     <!-- 策展論述 -->
     <section class="exhibition-intro">
       <div class="container">
-        <h2 class="exhibition-main-title">科技征途：無硝煙的自由戰</h2>
-        <h3 class="exhibition-sub-title">開源運動在臺灣｜OCF 十週年特展</h3>
-        <p class="exhibition-quote">⸺打破科技與軟體封建，一場令人熱血沸騰的開放世界冒險⸺</p>
+        <!-- SEO 標題（視覺上隱藏但保留在 DOM 中） -->
+        <h2 class="exhibition-main-title" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">科技征途：無硝煙的自由戰</h2>
+        <h3 class="exhibition-sub-title" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">開源運動在臺灣｜OCF 十週年特展</h3>
+        <p class="exhibition-quote" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">⸺打破科技與軟體封建，一場令人熱血沸騰的開放世界冒險⸺</p>
 
         <p class="exhibition-text">
           <em>1989⸺一個象徵自由的年代，處處都在為破除集權和獨裁，鳴響關鍵一槍。</em><br>
@@ -659,6 +766,16 @@
         <div class="knowledge-box">
           <strong>無論是公民科技或是開源社群</strong>，重要記憶眾多且本展篇幅有限，無法涵蓋所有事件，在此特別說明。歡迎在現場的你，發揮開源與自由貢獻精神，透過我們的互動方式，貢獻你知道的社群和記憶哦！
         </div>
+
+        <!-- Banner3 展示 -->
+        <div class="exhibition-banner">
+            <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513704680/in/album-72177720326046662/lightbox/">
+            <img src="banner-web/banner3.jpg" alt="Banner 3" class="preview-image">
+            <div class="image-overlay">
+              <span class="view-fullsize">查看大圖</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -666,21 +783,20 @@
     <section class="curator-section">
       <div class="container">
         <h2 class="curator-title">策展人</h2>
+        <h3 class="ocf-title">開放文化基金會 (Open Culture Foundation, OCF)</h3>
 
         <div class="curator-content">
-          <div class="curator-logo">
-            <a href="https://ocf.tw/mediakit/logo.png" target="_blank" rel="noopener noreferrer">
-              <img src="images/image37.png" alt="開放文化基金會 Logo" class="ocf-logo">
-            </a>
-            <p class="logo-caption">
-              <a href="https://ocf.tw/mediakit/logo.png" target="_blank">圖片下載連結</a>
-            </p>
+          <!-- OCF Banner -->
+          <div class="curator-banner">
+            <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513610768/in/album-72177720326046662/lightbox/">
+              <img src="banner-web/banner4.jpg" alt="OCF 策展人 Banner" class="curator-image">
+              <div class="image-overlay">
+                <span class="view-fullsize">查看大圖</span>
+              </div>
+            </div>
           </div>
 
           <div class="curator-info">
-            <h3 class="ocf-title">開放文化基金會（Open Culture Foundation, OCF）</h3>
-            <img src="images/image14.png" alt="OCF 標誌" class="ocf-symbol">
-
             <p class="ocf-description">
               開放文化基金會（Open Culture Foundation, OCF）是一個非營利性組織。透過推廣開放科技和跨界合作，在臺灣持續的銜繫科技社群與其他公／私領域，來保障開放共創的數位人權、支持透明涵融的數位公民社會。
             </p>
@@ -693,21 +809,7 @@
               自 2014 年創立以來，OCF 以法人做為組織形式，支持臺灣 40 多個開放科技社群，在過程中，不僅是持續性的推廣開放科技概念，OCF 也開始參與政策倡議，為眾人的數位人權發聲，進而創建出在臺灣發展開放科技的基地。然而，這些成果並非由開放文化基金會獨立實現，而是透過科技社群和公民夥伴一起促使臺灣的數位／網路環境變得更加公開、透明，利於公眾參與。
             </p>
 
-            <h4 class="core-areas-title">OCF 五大核心領域</h4>
-            <p class="core-areas-intro">
-              開放文化基金會透過推動下述之五大領域來達成數位公民社會的實現和應對數位時代各項威脅的可能。
-            </p>
 
-            <div class="core-areas-image">
-              <a href="https://ocf.tw/p/test/main%20areas.png" target="_blank" rel="noopener noreferrer">
-                <img src="images/image35.png" alt="OCF 五大核心領域" class="core-areas-img">
-              </a>
-              <p class="image-caption">
-                <a href="https://ocf.tw/p/test/main%20areas.png" target="_blank">圖片下載連結</a>
-              </p>
-            </div>
-
-            <img src="images/image43.png" alt="OCF 相關圖片" class="ocf-additional-img">
           </div>
         </div>
       </div>
@@ -715,6 +817,9 @@
 
     <div class="container">
       <main>
+
+         <h2 class="timeline-section-title">社群回憶錄：開源運動在臺灣</h2>
+
         <section class="timeline-dual" id="timeline-container">
           <!-- Timeline items will be loaded dynamically -->
         </section>
@@ -734,9 +839,103 @@
           </div>
         </section>
 
+        <!-- International 系列 -->
+        <section class="banner-gallery-section">
+          <div class="container">
+
+            <!-- Community 系列 -->
+            <div class="banner-category">
+              <h3>開源繁星錄，在地的星辰與基石</h3>
+              <div class="image-grid">
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54518348861/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/community1.jpg" alt="Community 1" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54518611053/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/community2.jpg" alt="Community 2" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Global 系列 -->
+            <div class="banner-category">
+              <h3>社群回憶錄：開源運動在臺灣</h3>
+              <div class="image-grid">
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513609888/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/global1-rtl.jpg" alt="Global 1" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513703695/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/global2-rtl.jpg" alt="Global 2" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513532619/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/ocf1-rtl.jpg" alt="OCF 1" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513349711/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/ocf2-rtl.jpg" alt="OCF 2" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513611083/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/taiwan1-rtl.jpg" alt="Taiwan 1" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54512485602/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/taiwan2-rtl.jpg" alt="Taiwan 2" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54513350306/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/taiwan3-rtl.jpg" alt="Taiwan 3" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="banner-category">
+              <h3>開源繁星錄，來自星際間的聯盟祝福</h3>
+              <div class="image-grid">
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54518348841/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/intl1.jpg" alt="International 1" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+                <div class="image-item" data-fullsize="https://www.flickr.com/photos/ocftw/54518699210/in/album-72177720326046662/lightbox/">
+                  <img src="banner-web/intl2.jpg" alt="International 2" class="preview-image">
+                  <div class="image-overlay">
+                    <span class="view-fullsize">查看大圖</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="reference-section">
           <div class="container">
-            <h2 class="reference-title">參考資料</h2>
+            <h3 class="reference-title">參考資料</h3>
             <ul class="reference-list">
               <li>Abel Samot. 2023/10/11. The evolution of the Open Source market & how Fair Code is taking over. Retrieved from: <a href="https://medium.com/red-river-west/the-evolution-of-the-open-source-market-how-fair-code-is-taking-over-6c406570c63f" target="_blank">https://medium.com/red-river-west/the-evolution-of-the-open-source-market-how-fair-code-is-taking-over-6c406570c63f</a></li>
               <li>Codemotion. 2023/2/24. Infographic: The History of Open Source. Retrieved from: <a href="https://www.codemotion.com/magazine/infographics/the-history-of-open-source/" target="_blank">https://www.codemotion.com/magazine/infographics/the-history-of-open-source/</a></li>
@@ -1054,8 +1253,25 @@
         return section;
       }
 
+      // 開啟 Flickr 大圖功能
+      function initLightbox() {
+        const imageItems = document.querySelectorAll('.image-item');
+
+        imageItems.forEach(item => {
+          item.addEventListener('click', () => {
+            const fullsizeSrc = item.dataset.fullsize;
+            if (fullsizeSrc) {
+              window.open(fullsizeSrc, '_blank');
+            }
+          });
+        });
+      }
+
       // Load timeline when page loads
-      document.addEventListener('DOMContentLoaded', loadTimeline);
+      document.addEventListener('DOMContentLoaded', () => {
+        loadTimeline();
+        initLightbox();
+      });
     </script>
 
     <script src="/js/all.js"></script>
