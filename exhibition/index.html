@@ -304,6 +304,19 @@
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       }
 
+      /* QR code 圖片特殊樣式 */
+      .timeline-image.qr-code {
+        max-width: 150px;
+        height: auto;
+        margin: 0.5rem auto;
+        display: block;
+      }
+
+      .timeline-image.qr-code:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
       figure a {
         display: block;
         cursor: pointer;
@@ -1197,6 +1210,10 @@
                 image.src = img.src;
                 image.alt = img.alt || '';
                 image.className = 'timeline-image';
+                // 檢測是否為 QR code 圖片
+                if (img.isQRCode) {
+                  image.classList.add('qr-code');
+                }
                 link.appendChild(image);
                 figure.appendChild(link);
               } else {
@@ -1204,6 +1221,10 @@
                 image.src = img.src;
                 image.alt = img.alt || '';
                 image.className = 'timeline-image';
+                // 檢測是否為 QR code 圖片
+                if (img.isQRCode) {
+                  image.classList.add('qr-code');
+                }
                 figure.appendChild(image);
               }
 
