@@ -309,11 +309,9 @@
 
       .timeline-left .timeline-content {
         border-left: none;
-        /* border-right: 4px solid #6450DC; */
       }
 
       .timeline-right .timeline-content {
-        /* border-left: 4px solid #00A896; */
         border-right: none;
       }
 
@@ -348,10 +346,6 @@
 
       .timeline-year {
         display: none;
-        /* font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--accent-color);
-        margin-bottom: 0.5rem; */
       }
 
       .timeline-title {
@@ -448,20 +442,19 @@
         .timeline-left {
           text-align: left;
           padding-right: 0;
-          padding-left: 3rem;
         }
 
         .timeline-right {
-          padding-left: 3rem;
+          padding-left: 0;
         }
 
         .timeline-item::before {
           display: none;
         }
 
-        .timeline-content {
-          border-left: 4px solid var(--accent-color) !important;
-          border-right: none !important;
+        .timeline-left .timeline-knowledge {
+          border-left: none !important;
+          border-right: 3px solid var(--accent-color);
         }
 
         .milestone-content {
