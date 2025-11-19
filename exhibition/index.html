@@ -379,11 +379,17 @@
       }
 
       .timeline-image {
+        width: auto;
         max-width: 100%;
         height: auto;
         border-radius: 0.5rem;
-        margin: 1rem 0;
+        margin: 1rem auto;
         transition: all 0.3s ease;
+      }
+
+      .timeline-image.logo {
+        max-width: 250px;
+        display: block;
       }
 
       .timeline-image:hover {
@@ -392,20 +398,18 @@
       }
 
       /* QR code 圖片特殊樣式 */
-      .timeline-image.qr-code {
+      .timeline-image.qr {
         max-width: 150px;
-        height: auto;
-        margin: 0.5rem auto;
         display: block;
       }
 
-      .timeline-image.qr-code:hover {
+      .timeline-image.qr:hover {
         transform: none;
         box-shadow: none;
       }
 
       /* QR code 在深色模式下的白色邊框 */
-      body[data-theme="dark"] .timeline-image.qr-code {
+      body[data-theme="dark"] .timeline-image.qr {
         border: 5px solid white;
       }
 
@@ -1286,7 +1290,6 @@
         return row;
       }
 
-
       function createTimelineItem(item) {
         const article = document.createElement('article');
         article.className = 'timeline-item';
@@ -1360,9 +1363,10 @@
                 image.src = img.src;
                 image.alt = img.alt || '';
                 image.className = 'timeline-image';
-                // 檢測是否為 QR code 圖片
-                if (img.isQRCode) {
-                  image.classList.add('qr-code');
+                if (img.type === 'logo') {
+                  image.classList.add('logo');
+                } else if (img.type === 'qr') {
+                  image.classList.add('qr');
                 }
                 link.appendChild(image);
                 figure.appendChild(link);
@@ -1371,9 +1375,10 @@
                 image.src = img.src;
                 image.alt = img.alt || '';
                 image.className = 'timeline-image';
-                // 檢測是否為 QR code 圖片
-                if (img.isQRCode) {
-                  image.classList.add('qr-code');
+                if (img.type === 'logo') {
+                  image.classList.add('logo');
+                } else if (img.type === 'qr') {
+                  image.classList.add('qr');
                 }
                 figure.appendChild(image);
               }

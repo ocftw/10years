@@ -12,7 +12,8 @@
           "src": "images/image41.png",
           "alt": "GNU 牛羚標誌",
           "credit": "heckert_gnu.big, CC-BY-SA-2.0 @Free Software Foundation, Inc.",
-          "link": "https://www.gnu.org/graphics/heckert_gnu.html"
+          "link": "https://www.gnu.org/graphics/heckert_gnu.html",
+          "type": "logo"
         }
       ]
     },
@@ -28,7 +29,8 @@
           "src": "images/image51.png",
           "alt": "自由軟體基金會標誌",
           "credit": "logo_fsf.org, CC0 @Free Software Foundation, Inc.",
-          "link": "https://www.gnu.org/graphics/fsf-logo.html"
+          "link": "https://www.gnu.org/graphics/fsf-logo.html",
+          "type": "logo"
         }
       ]
     },
@@ -44,7 +46,8 @@
           "src": "images/image21.png",
           "alt": "GPLv3 標誌",
           "credit": "GPLv3, 公眾領域。",
-          "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/2880px-GPLv3_Logo.svg.png"
+          "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/2880px-GPLv3_Logo.svg.png",
+          "type": "logo"
         }
       ]
     },
@@ -106,7 +109,8 @@
           "src": "images/image40.png",
           "alt": "Red Hat 標誌",
           "credit": "Tux 成為戴上紅帽的商人。CC BY-SA 4.0 @VectorVoyager",
-          "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/RedHat_Medal.svg/1200px-RedHat_Medal.svg.png?20220304140459"
+          "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/RedHat_Medal.svg/1200px-RedHat_Medal.svg.png?20220304140459",
+          "type": "logo"
         }
       ]
     },
@@ -121,7 +125,8 @@
           "src": "images/image26.png",
           "alt": "FreeBSD 小惡魔標誌",
           "credit": "FreeBSD 的代表：紅色小惡魔 Beerware License ＠Poul-Henning Kamp",
-          "link": ""
+          "link": "",
+          "type": "logo"
         }
       ]
     },
@@ -198,7 +203,8 @@
           "src": "images/image28.png",
           "alt": "開放源碼促進會標誌",
           "credit": "OSI_Standard_Logo, CC 4.0 @Open Source Initiative",
-          "link": "https://opensource.org/osi-logo-files"
+          "link": "https://opensource.org/osi-logo-files",
+          "type": "logo"
         }
       ]
     },
@@ -296,7 +302,8 @@
           "src": "images/image16.png",
           "alt": "創用 CC 標誌",
           "credit": "cc logo, CC 4.0 @Creative Commons",
-          "link": ""
+          "link": "",
+          "type": "logo"
         }
       ]
     },
@@ -392,7 +399,8 @@
           "src": "images/image45.png",
           "alt": "Android 標誌",
           "credit": "Android logo, 公眾領域",
-          "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Android_logo_2023_%28stacked%29.svg/1920px-Android_logo_2023_%28stacked%29.svg.png"
+          "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Android_logo_2023_%28stacked%29.svg/1920px-Android_logo_2023_%28stacked%29.svg.png",
+          "type": "logo"
         }
       ]
     },
@@ -437,7 +445,8 @@
           "src": "images/image10.png",
           "alt": "GitHub 標誌",
           "credit": "CC BY 4.0 @GitHub",
-          "link": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Logo_of_Github.jpg?20230410211349"
+          "link": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Logo_of_Github.jpg?20230410211349",
+          "type": "logo"
         }
       ]
     },
@@ -498,9 +507,9 @@
           "src": "images/image13.png",
           "alt": "PyCon Taiwan 年會",
           "credit": "PyCon Taiwan 年會",
-          "link": "https://drive.google.com/file/d/1VlGOM1H3F0q3rcDupghlFlD7Kva79brM/view?usp=drive_link"
+          "link": "https://drive.google.com/file/d/1VlGOM1H3F0q3rcDupghlFlD7Kva79brM/view?usp=drive_link",
+          "type": "logo"
         }
-
       ]
     },
     {
@@ -540,7 +549,7 @@
           "alt": "經濟動能推升方案廣告截圖",
           "credit": "bit.ly/EXE-YUAN-VIDEO 引發許多人討論的「經濟動能推升方案」廣告，促使更多公民科技投入者",
           "link": "https://bit.ly/EXE-YUAN-VIDEO",
-          "isQRCode": true
+          "type": "qr"
         }
       ]
     },
@@ -576,7 +585,7 @@
           "alt": "QRCode",
           "credit": "https://bit.ly/OT-2013-Hong",
           "link": "https://bit.ly/OT-2013-Hong",
-          "isQRCode": true
+          "type": "qr"
         }
       ]
     },
@@ -608,7 +617,8 @@
           "src": "images/image53.png",
           "alt": "第一次募款餐會活動現場照片，由志工所拍攝",
           "credit": "第一次募款餐會活動現場照片，由志工所拍攝",
-          "link": "https://hackmd.io/_uploads/B1BTpbWvR.jpg"
+          "link": "https://hackmd.io/_uploads/B1BTpbWvR.jpg",
+          "type": "logo"
         }
       ]
     },
@@ -645,7 +655,8 @@
           "src": "images/image24.png",
           "alt": "CONCOM 參與會眾合影",
           "credit": "CONCOM 參與會眾合影，CC BY @othree",
-          "link": "https://hackmd.io/_uploads/H1lfPVZw0.jpg"
+          "link": "https://hackmd.io/_uploads/H1lfPVZw0.jpg",
+          "type": "logo"
         }
       ]
     },
@@ -676,7 +687,8 @@
           "src": "images/image18.png",
           "alt": "初代 OCF LOGO",
           "credit": "CC BY @開放文化基金會。",
-          "link": ""
+          "link": "",
+          "type": "logo"
         }
       ]
     },
@@ -706,7 +718,7 @@
           "alt": "",
           "credit": "",
           "link": "https://opengovreport.ocf.tw/#tab-0",
-          "isQRCode": true
+          "type": "qr"
         }
       ]
     },
@@ -794,8 +806,6 @@
           "link": "https://ocf.tw/p/admin/2020/p7-2.jpg"
         }
       ]
-
-
     },
     {
       "year": 2020,
@@ -823,7 +833,7 @@
           "alt": "",
           "credit": "openstartervillage.ocf.tw",
           "link": "https://openstartervillage.ocf.tw/",
-          "isQRCode": true
+          "type": "qr"
         }
       ]
     },
@@ -853,7 +863,7 @@
           "alt": "",
           "credit": "",
           "link": "https://ocf.tw/p/rdr/2022/",
-          "isQRCode": true
+          "type": "qr"
         },
         {
           "src": "images/image20.png",
@@ -866,7 +876,7 @@
           "alt": "",
           "credit": "",
           "link": "https://digitalsecurityhandbook.ocf.tw/",
-          "isQRCode": true
+          "type": "qr"
         }
       ]
     },
@@ -920,7 +930,7 @@
           "alt": "",
           "credit": "",
           "link": "",
-          "isQRCode": true
+          "type": "qr"
         },
         {
           "src": "images/image1.png",
@@ -933,7 +943,7 @@
           "alt": "",
           "credit": "",
           "link": "",
-          "isQRCode": true
+          "type": "qr"
         }
       ]
     },
@@ -983,7 +993,7 @@
           "alt": "臺北程式設計節 QRCode",
           "credit": "臺北程式設計節 https://codefest.taipei/",
           "link": "https://codefest.taipei/",
-          "isQRCode": true
+          "type": "qr"
         }
       ]
     },
